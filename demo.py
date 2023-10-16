@@ -38,7 +38,7 @@ It = signal.convolve2d(I1_smooth,[[0.25,0.25],[0.25,0.25]],'same') + signal.conv
 Iu = cv2.filter2D(I1_smooth, -1, kernel_y) #Gradient over Y
 It = cv2.filter2D(I2_smooth, -1, kernel_t) - cv2.filter2D(I1_smooth, -1, kernel_t)  #Gradient over Time """
 
-random_values = np.random.rand(1000)
+random_values = np.random.rand(100)
 sampled_points = point1 + random_values[:, np.newaxis] * (point2 - point1)
 
 # Draw each point on the image
