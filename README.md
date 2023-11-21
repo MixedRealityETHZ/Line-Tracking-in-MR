@@ -21,3 +21,5 @@ Either before or after running the application, type as below:
 <USER_HOME>/.buildozer/android/platform/android-sdk/platform-tools/adb logcat -s "python"
 # e.g. /home/sjkim/.buildozer/android/platform/android-sdk/platform-tools/adb logcat -s "python"
 ```
+### Notes
+* The application does not include explicit asking of the camera permission, though it is needed. Please enable it before running the application.
