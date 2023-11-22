@@ -11,7 +11,6 @@ Builder.load_file("myapplayout.kv")
 
 class AndroidCamera(Camera):
     camera_resolution = (640, 480)
-    counter = 0
 
     def __init__(self, **kwargs):
         super(AndroidCamera, self).__init__(**kwargs)
@@ -34,7 +33,6 @@ class AndroidCamera(Camera):
 
     def frame_to_screen(self, frame):
         frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGBA)
-        self.counter += 1
         gray = cv2.cvtColor(frame_rgb, cv2.COLOR_RGBA2GRAY)
         segments, scores = pyelsed.detect(gray)
 

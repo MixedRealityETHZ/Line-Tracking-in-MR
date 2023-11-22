@@ -1,5 +1,5 @@
 # Line Tracking in Mixed Reality
-This Project is a course project of 2023 Fall [Mixed Reality](https://cvg.ethz.ch/lectures/Mixed-Reality/) at ETH. We aim to real-time visualize line-tracking on mobile phones.
+This Project is a course project of 2023 Fall [Mixed Reality](https://cvg.ethz.ch/lectures/Mixed-Reality/) at ETH. We aim to real-time visualize line-tracking on mobile phones. Our work is based on [ELSED](https://github.com/iago-suarez/ELSED) and [EPLF-VINS](https://github.com/LeiXu1999/EPLF-VINS/tree/main).
 ### 1. Clone Repository
 ```bash
 git clone -b develop https://github.com/kstavratis/mixed-reality-line-tracking.git
@@ -22,4 +22,5 @@ Either before or after running the application, type as below:
 # e.g. /home/sjkim/.buildozer/android/platform/android-sdk/platform-tools/adb logcat -s "python"
 ```
 ### Notes
+* [Debugger mode](https://developer.android.com/studio/debug/dev-options) of the mobile phone should be enabled before deploy and run.
 * The application does not include explicit asking of the camera permission, though it is needed. Please enable it before running the application.
