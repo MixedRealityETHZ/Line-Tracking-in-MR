@@ -1,0 +1,30 @@
+This patch allow that the line tracker's build command correctly detects our version
+of Python and OpenCV, so we can successfully build the python bindings.
+--- Mixed-Reality-Pybind/CMakeLists.txt.orig 2023-12-05 08:29:01.155706900 +0100
++++ Mixed-Reality-Pybind/CMakeLists.txt      2023-12-05 08:36:46.988296986 +0100
+--- CMakeLists.txt.orig 2023-12-05 08:29:01.155706900 +0100
++++ CMakeLists.txt      2023-12-05 08:36:46.988296986 +0100
+@@ -5,7 +5,8 @@
+ set(CMAKE_CXX_FLAGS "-std=c++14")
+ set(CMAKE_CXX_FLAGS_RELEASE "-O3 -Wall -g")
+ 
+-find_package(OpenCV 3.4.16 REQUIRED)
++find_package(OpenCV REQUIRED PATHS $ENV{OpenCV_LOCATION} NO_DEFAULT_PATH)
+ find_package(Eigen3 REQUIRED)
+-find_package(Boost REQUIRED COMPONENTS filesystem program_options system)
++find_package(Boost REQUIRED)
++set(OpenCV_LIBS opencv_features2d opencv_imgproc opencv_stitching opencv_calib3d opencv_flann opencv_ml opencv_videoio opencv_core opencv_highgui opencv_objdetect opencv_video opencv_dnn opencv_imgcodecs opencv_photo opencv_ximgproc)
+ 
+@@ -28,6 +28,11 @@
+ 
+ set_target_properties(linefeature_tracker PROPERTIES POSITION_INDEPENDENT_CODE ON)
+ 
++set(PYTHON_LIBRARY $ENV{PYTHON_LIBRARY})
++set(PYTHON_INCLUDE_DIR $ENV{PYTHON_INCLUDE_DIR})
++find_package(PythonLibs REQUIRED)
++include_directories(${PYTHON_INCLUDE_DIRS})
++
+ add_subdirectory(pybind11)
+ pybind11_add_module(line_tracker src/binder.cpp)
+-target_link_libraries(line_tracker PRIVATE linefeature_tracker ${OpenCV_LIBS} ${Boost_LIBRARIES})
++target_link_libraries(line_tracker PRIVATE linefeature_tracker ${OpenCV_LIBS} ${Boost_LIBRARIES} ${PYTHON_LIBRARIES})

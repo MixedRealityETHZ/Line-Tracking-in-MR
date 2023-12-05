@@ -1,3 +1,4 @@
 .buildozer
 bin
 *.pyc
+tmp
