@@ -36,7 +36,7 @@ version = 0.1
 
 # (list) Application requirements
 # comma seperated e.g. requirements = sqlite3,kivy
-requirements = python3,kivy==2.2.1,opencv==4.5.2,opencv_extras==4.5.2,numpy,pybind11,pyelsed,line_tracker
+requirements = python3,kivy==2.2.1,kivymd==1.1.1,opencv==4.5.2,opencv_extras==4.5.2,numpy,pybind11,pyelsed,line_tracker
 p4a.local_recipes = ./recipes
 
 # (str) Custom source folders for requirements

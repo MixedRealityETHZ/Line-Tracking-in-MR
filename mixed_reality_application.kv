@@ -1,0 +1,50 @@
+<MixedRealityApplicationLayout>
+    orientation: 'vertical'
+    size: root.width, root.height
+    
+    AndroidCamera:
+        id: camera
+        index: 0
+        resolution: self.camera_resolution
+        allow_stretch: True
+        play: True
+        canvas.before:
+            PushMatrix
+            Rotate:
+                angle: -90
+                origin: self.center
+            Scale:
+                x: 1.333
+                y: -1.333
+                origin: self.center
+        canvas.after:
+            PopMatrix
+
+
+    MDAnchorLayout:
+        # Have the AnchorLayout for the line buttons be on the right side of the screen.
+
+        anchor_x: 'right'
+        anchor_y: 'bottom'
+        # These values do not make any sense.
+        # They were hard-coded with try-and-error.
+        size_hint: (1, 1)
+        pos_hint: {'center_x': 1.35, 'center_y': 0.5} # Remember that the RHS are interpreted in Python.
+
+
+        MDBoxLayout:
+            orientation: 'vertical'
+
+            NegateIconButton:
+                id: show_tracked_button
+                icon: 'transition'
+                on_press: self.negate_attribute(camera, '_show_tracked')
+                # For some reason, this `pos_hint` "drags" the rest of the content
+                # of the parent `BoxLayout`.
+                # pos_hint: {'center_x': 0.9, 'center_y': 0.1} # Remember that the RHS are interpreted in Python.
+
+
+            NegateIconButton:
+                id: show_newly_detected_button
+                icon: 'new-box'
+                on_press: self.negate_attribute(camera, '_show_newly_detected')
