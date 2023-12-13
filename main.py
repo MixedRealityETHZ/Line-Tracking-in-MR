@@ -2,7 +2,7 @@ from kivymd.app import MDApp
 
 from kivy.lang import Builder
 
-from kivy.properties import BooleanProperty
+from kivy.properties import BooleanProperty, NumericProperty
 
 from kivymd.uix.widget import Widget
 from kivymd.uix.floatlayout import MDFloatLayout
@@ -25,6 +25,21 @@ class AndroidCamera(Camera):
 
     _show_tracked = BooleanProperty(False)
     _show_newly_detected = BooleanProperty(False)
+    _nr_afterimage_lines = NumericProperty(0); _nr_afterimage_min, _nr_afterimage_max = 0, 20 
+    
+    # Defining the `nr_afterimage_lines` and its setter to make certain
+    # that the attribute does not exceed the bounds when called/manipulated.
+    @property
+    def nr_afterimage_lines(self):
+        return self._nr_afterimage_lines
+    
+    @nr_afterimage_lines.setter
+    def nr_afterimage_lines(self, val):
+        if self._nr_afterimage_min <= val <= self._nr_afterimage_max:
+            self._nr_afterimage_lines = val
+
+
+        
 
     def __init__(self, **kwargs):
         super(AndroidCamera, self).__init__(**kwargs)
@@ -85,6 +100,35 @@ class AndroidCamera(Camera):
                 cv2.line(frame_rgba, start, end, (255, 0, 0), 2, cv2.LINE_AA)
                 cv2.line(frame_rgba, start1, end1, (255, 0, 0), 1, cv2.LINE_AA)
                 cv2.putText(frame_rgba, str(lineIDs[idx]), un_line["keyPoint"][0], cv2.FONT_HERSHEY_SIMPLEX, 0.45, (255, 230, 0), 1, cv2.LINE_AA)
+
+            
+        if self.nr_afterimage_lines > 0:
+
+            lineRec = cur_img.lineRec
+
+            # Declare constant that will be used for visualizing the lines.
+            lengthDiff = 1 / self.nr_afterimage_lines
+
+            for m in range(len(lineRec)):
+                lines = lineRec[m]
+                
+                # Show the afterimage using only the most recent line entries.
+                lines = lines[-min(len(lines), self.nr_afterimage_lines):]
+
+                
+                for j, line in enumerate(lines[:-1]): #-1 to ignore the final line, which is the currently tracked line.
+
+                    start, end = line['start'], line['end']
+
+                    # Get inner points using parametric equations
+                    s = int((1 - lengthDiff * j) * start[0] + lengthDiff * j * end[0]),\
+                        int((1 - lengthDiff * j) * start[1] + lengthDiff * j * end[1])
+                    
+                    e = int((1 - lengthDiff * j) * end[0] + lengthDiff * j * start[0]),\
+                        int((1 - lengthDiff * j) * end[1] + lengthDiff * j * start[1])
+                    
+
+                    cv2.line(frame_rgba, s, e, (0, 0, 55 + 10 * j), 1, cv2.LINE_AA)
         
             
         self.texture.blit_buffer(frame_rgba.reshape(-1), colorfmt='rgba', bufferfmt='ubyte')
@@ -126,7 +170,10 @@ class NegateIconButton(MDIconButton):
                             f'{current_boolean_value} is of type {type(current_boolean_value)} instead.')
 
 class MixedRealityApplicationLayout(MDFloatLayout):
-    pass
+    def slider_callback(self):
+
+        self.ids.camera.nr_afterimage_lines = int(self.ids.afterimage_counter.value)
+        return True
 
 class MyApp(MDApp):
     def build(self):

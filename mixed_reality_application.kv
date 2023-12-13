@@ -1,9 +1,14 @@
+#:kivy 1.0
+
 <MixedRealityApplicationLayout>
     orientation: 'vertical'
     size: root.width, root.height
     
     AndroidCamera:
         id: camera
+
+        # size_hint: (1, 0.7)
+
         index: 0
         resolution: self.camera_resolution
         allow_stretch: True
@@ -21,30 +26,52 @@
             PopMatrix
 
 
-    MDAnchorLayout:
-        # Have the AnchorLayout for the line buttons be on the right side of the screen.
+    MDBoxLayout:
+        orientation: 'horizontal'
+        size_hint: (1, 0.3)
+        padding: 10
 
-        anchor_x: 'right'
-        anchor_y: 'bottom'
-        # These values do not make any sense.
-        # They were hard-coded with try-and-error.
-        size_hint: (1, 1)
-        pos_hint: {'center_x': 1.35, 'center_y': 0.5} # Remember that the RHS are interpreted in Python.
+        Slider: # MDSlider class is defective and it makes the Android app crash. 
+            id: afterimage_counter
+
+            size_hint: (0.7, 1)
+            pos_hint: {'center_x': .5, 'center_y': .1}
+
+            hint: True
+            step : 1
+            range: (camera._nr_afterimage_min, camera._nr_afterimage_max)
+
+            on_touch_move: root.slider_callback()
+
+        MDAnchorLayout:
+
+            # Have the AnchorLayout for the line buttons be on the bottom right side of the screen.
+            # This doesn't work properly with a `MDBoxLayout` child...
+            anchor_x: 'right'
+            anchor_y: 'bottom'
+            # These values do not make any sense.
+            # They were hard-coded with try-and-error.
+            size_hint: (0.3, 1)
+            # pos_hint: {'center_x': 0.5, 'center_y': 0.5}
 
 
-        MDBoxLayout:
-            orientation: 'vertical'
+            MDBoxLayout:
+                orientation: 'vertical'
+                pos_hint: {'right': 1, 'center_y': .5}
 
-            NegateIconButton:
-                id: show_tracked_button
-                icon: 'transition'
-                on_press: self.negate_attribute(camera, '_show_tracked')
-                # For some reason, this `pos_hint` "drags" the rest of the content
-                # of the parent `BoxLayout`.
-                # pos_hint: {'center_x': 0.9, 'center_y': 0.1} # Remember that the RHS are interpreted in Python.
+                NegateIconButton:
+                    id: show_tracked_button
+                    icon: 'transition'
+
+                    pos_hint: {'right': 1}
+
+                    on_press: self.negate_attribute(camera, '_show_tracked')
 
 
-            NegateIconButton:
-                id: show_newly_detected_button
-                icon: 'new-box'
-                on_press: self.negate_attribute(camera, '_show_newly_detected')
+                NegateIconButton:
+                    id: show_newly_detected_button
+                    icon: 'new-box'
+
+                    pos_hint: {'right': 1}
+
+                    on_press: self.negate_attribute(camera, '_show_newly_detected')
