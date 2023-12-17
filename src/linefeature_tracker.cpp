@@ -463,7 +463,7 @@ void OpticalFlowMultiLevel(
             {
                 kp2.push_back(kp2_pyr[m]);
                 success.push_back(m);
-                // drawLine(kp2_pyr[m], mergel, lineIndex++);
+                drawLine(kp2_pyr[m], mergel, lineIndex++);
             }
         }
     }
@@ -663,7 +663,6 @@ bool mergeLine(const Line &line, const Mat &merge, vector<Line> &vecline, Mat &m
     // ROS_WARN("success\n");
     return true;
 }
-
 bool mergeTrackedLine(const Line &line, const Mat &merge, vector<Line> &vecline, Mat &mergel)
 {
     //* 用提取到的线来替代追踪到的线条
@@ -696,6 +695,7 @@ bool mergeTrackedLine(const Line &line, const Mat &merge, vector<Line> &vecline,
         if (mergeStart.x < line.StartPt.x && mergeStart.x > line.EndPt.x &&
             mergeEnd.x < line.StartPt.x && mergeEnd.x > line.EndPt.x)
         {
+            // ROS_WARN("!mergeing tracked line ..\n");
             mergeStart = line.StartPt;
             mergeEnd = line.EndPt;
             vecline[lineIndex].resetLine();
@@ -707,6 +707,7 @@ bool mergeTrackedLine(const Line &line, const Mat &merge, vector<Line> &vecline,
         if (mergeStart.x > line.StartPt.x && mergeStart.x < line.EndPt.x &&
             mergeEnd.x > line.StartPt.x && mergeEnd.x < line.EndPt.x)
         {
+            // ROS_WARN("!mergeing tracked line ..\n");
             mergeStart = line.StartPt;
             mergeEnd = line.EndPt;
             vecline[lineIndex].resetLine();
@@ -767,7 +768,7 @@ void LineFeatureTracker::readImage(const cv::Mat &_img, int elsed_bool)
     double min_edline_length = 0.125;
     upm::ELSED elsed;
     Ptr<cv::ximgproc::EdgeDrawing> ed = cv::ximgproc::createEdgeDrawing();
-
+    
     if (elsed_bool){
         elsed.params.gradientThreshold = 32;
         elsed.params.anchorThreshold = 16;
@@ -851,8 +852,8 @@ void LineFeatureTracker::readImage(const cv::Mat &_img, int elsed_bool)
 #endif
                 num--;
 #if _CONTROLLINEDENSE_
-                // cv::line(maskl, l.StartPt, l.EndPt, 0, 30);
-                // drawLine(l, mergel, lineIndex++);
+                cv::line(maskl, l.StartPt, l.EndPt, 0, 30);
+                drawLine(l, mergel, lineIndex++);
 #endif
             }
         }
@@ -882,7 +883,7 @@ void LineFeatureTracker::readImage(const cv::Mat &_img, int elsed_bool)
                 cv::Mat maskl = cv::Mat(ROW, COL, CV_8UC1, 255);
                 cv::Mat mergel = cv::Mat(ROW, COL, CV_8UC1, 255);
                 setMask();
-                // setMerge(mergel);
+                setMerge(mergel);
 
                 //提取新的
                 //lsd_->detect(img, newlsd, 2, 1, opts, mask);
@@ -928,6 +929,7 @@ void LineFeatureTracker::readImage(const cv::Mat &_img, int elsed_bool)
                         linerecord.push_back(linest);
 
                         forw_img->lineRec.push_back(linerecord);
+
 #endif
 #if _ONELINE_
                         break;
@@ -935,6 +937,7 @@ void LineFeatureTracker::readImage(const cv::Mat &_img, int elsed_bool)
                         num--;
 #if _CONTROLLINEDENSE_
                         cv::line(maskl, l.StartPt, l.EndPt, 0, 30);
+                        drawLine(l, mergel, lineIndex++);
 #endif
                     }
                 }
