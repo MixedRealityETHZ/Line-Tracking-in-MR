@@ -308,7 +308,7 @@ public:
     vector<Line> &normalizedLineEndPoints();
     vector<Line> &unNormalizedLineEndPoints() { return cur_img->vecLine; }
 
-    void readImage(const cv::Mat &_img);
+    void readImage(const cv::Mat &_img, int elsed);
     
     void startVideo();
     void releaseVideoWriter();

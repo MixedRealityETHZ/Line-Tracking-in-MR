@@ -122,12 +122,12 @@ PYBIND11_MODULE(line_tracker, m) {
 
     py::class_<LineFeatureTracker>(m, "LineFeatureTracker")
         .def(py::init<>())  // Default constructor
-        .def("readImage", [](LineFeatureTracker& self, py::array input) {
+        .def("readImage", [](LineFeatureTracker& self, py::array input, int elsed_bool) {
             // Convert the Python cv2 image to cv::Mat
             cv::Mat image = pyarray_to_cv_mat(input);
 
             // Call your existing readImage function
-            self.readImage(image);
+            self.readImage(image, elsed_bool);
         }, R"pbdoc(
             Track lines from a Python cv2 image.
         )pbdoc")

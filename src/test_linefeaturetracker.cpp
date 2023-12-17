@@ -8,7 +8,7 @@ int main() {
     cv::Mat frame1, frame2;
     int pub_count = 1;
     
-    VideoCapture capture("../tests/test_video.mp4");
+    VideoCapture capture("../tests/test_video3.mp4");
     Mat frame;
 
     if( !capture.isOpened() )
@@ -21,9 +21,11 @@ int main() {
     cv::VideoWriter outputVideo = cv::VideoWriter("output_video.avi", cv::VideoWriter::fourcc('M', 'J', 'P', 'G'),\
      30, cv::Size(frame.cols, frame.rows));
     
+    int elsed = 0;
+
     for( ; ; )
     {
-        trackerData.readImage(frame);
+        trackerData.readImage(frame, elsed);
 
         cv::Mat tmp_img;
         cv::cvtColor(trackerData.cur_img->img, tmp_img, CV_GRAY2RGB);

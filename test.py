@@ -4,7 +4,7 @@ import numpy as np
 VIS_TRACK = False
 
 if __name__ == '__main__':
-    cap = cv2.VideoCapture("tests/test_video.mp4")
+    cap = cv2.VideoCapture("tests/test_video2.mp4")
 
     if not cap.isOpened():
         print("Error opening video file")
@@ -19,9 +19,11 @@ if __name__ == '__main__':
     trackerData = line_tracker.LineFeatureTracker()
     
     # Read and display frames until the video ends
+    elsed = 0
+
     while True:
         #print(frame)
-        trackerData.readImage(frame)
+        trackerData.readImage(frame, elsed)
         cur_img = trackerData.getCurImg()
         img = cur_img.img
 
