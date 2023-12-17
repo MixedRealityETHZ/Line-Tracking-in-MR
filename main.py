@@ -16,6 +16,29 @@ import line_tracker
 
 Builder.load_file('mixed_reality_application.kv')
 
+colors = [
+    # (0, 0, 255),
+    (21, 0, 234),
+    (42, 0, 213),
+    (64, 0, 191),
+    (85, 0, 170),
+    (106, 0, 149),
+    (128, 0, 128),
+    (149, 0, 106),
+    (170, 0, 85),
+    (191, 0, 64),
+    (213, 0, 42),
+    (234, 0, 21),
+    (255, 0, 0),
+    (234, 21, 0),
+    (213, 42, 0),
+    (191, 64, 0),
+    (170, 85, 0),
+    (149, 106, 0),
+    (128, 128, 0),
+    (106, 149, 0)
+]
+
 class AndroidCamera(Camera):
     # "There is no built-in API for acquiring the maximum android camera resolution.
     # and in general the kivy.uix.camera is not in a good state on Android."
@@ -84,9 +107,9 @@ class AndroidCamera(Camera):
                 start, end = un_line["keyPoint"][0], un_line["keyPoint"][-1]
                 start1, end1 = un_line["StartPt"], un_line["EndPt"]
 
-                cv2.line(frame_rgba, start, end, (0, 255, 0), 2, cv2.LINE_AA)
-                cv2.line(frame_rgba, start1, end1, (0, 255, 0), 1, cv2.LINE_AA)
-                cv2.putText(frame_rgba, str(lineIDs[idx]), un_line["keyPoint"][0], cv2.FONT_HERSHEY_SIMPLEX, 0.45, (255, 230, 0), 1, cv2.LINE_AA)
+                cv2.line(frame_rgba, start, end, (0, 255, 0, 255), 2, cv2.LINE_AA)
+                # cv2.line(frame_rgba, start1, end1, (0, 255, 0), 1, cv2.LINE_AA)
+                cv2.putText(frame_rgba, str(lineIDs[idx]), un_line["keyPoint"][0], cv2.FONT_HERSHEY_SIMPLEX, 0.45, (255, 230, 0, 255), 1, cv2.LINE_AA)
 
         # Draw tracked lines.
         if show_tracked:
@@ -97,9 +120,9 @@ class AndroidCamera(Camera):
                 start, end = un_line["keyPoint"][1], un_line["keyPoint"][-1]
                 start1, end1 = un_line["StartPt"], un_line["EndPt"]
 
-                cv2.line(frame_rgba, start, end, (255, 0, 0), 2, cv2.LINE_AA)
-                cv2.line(frame_rgba, start1, end1, (255, 0, 0), 1, cv2.LINE_AA)
-                cv2.putText(frame_rgba, str(lineIDs[idx]), un_line["keyPoint"][0], cv2.FONT_HERSHEY_SIMPLEX, 0.45, (255, 230, 0), 1, cv2.LINE_AA)
+                cv2.line(frame_rgba, start, end, (255, 0, 0, 255), 2, cv2.LINE_AA)
+                # cv2.line(frame_rgba, start1, end1, (255, 0, 0), 1, cv2.LINE_AA)
+                cv2.putText(frame_rgba, str(lineIDs[idx]), un_line["keyPoint"][0], cv2.FONT_HERSHEY_SIMPLEX, 0.45, (255, 230, 0, 255), 1, cv2.LINE_AA)
 
             
         if self.nr_afterimage_lines > 0:
@@ -107,13 +130,14 @@ class AndroidCamera(Camera):
             lineRec = cur_img.lineRec
 
             # Declare constant that will be used for visualizing the lines.
-            lengthDiff = 1 / self.nr_afterimage_lines
+            lengthDiff = 0.4 / self.nr_afterimage_lines
 
             for m in range(len(lineRec)):
                 lines = lineRec[m]
                 
                 # Show the afterimage using only the most recent line entries.
                 lines = lines[-min(len(lines), self.nr_afterimage_lines):]
+                lines = lines[::-1]
 
                 
                 for j, line in enumerate(lines[:-1]): #-1 to ignore the final line, which is the currently tracked line.
@@ -128,9 +152,10 @@ class AndroidCamera(Camera):
                         int((1 - lengthDiff * j) * end[1] + lengthDiff * j * start[1])
                     
 
-                    cv2.line(frame_rgba, s, e, (0, 0, 55 + 10 * j), 1, cv2.LINE_AA)
+                    cv2.line(frame_rgba, s, e, (colors[j][2], colors[j][1], colors[j][0], 255), 1, cv2.LINE_AA)
         
             
+        # frame_rgba = cv2.cvtColor(frame, cv2.COLOR_RGB2RGBA)
         self.texture.blit_buffer(frame_rgba.reshape(-1), colorfmt='rgba', bufferfmt='ubyte')
 
 
