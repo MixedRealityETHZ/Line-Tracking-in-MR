@@ -13,7 +13,7 @@ class ELSEDRecipe(CppCompiledComponentsPythonRecipe):
     url = 'git+https://github.com/iago-suarez/ELSED.git'
 
     depends = ['setuptools', 'pybind11', 'python3', 'opencv']
-    patches = ['CMakeLists.patch']
+    patches = ['CMakeLists.patch', 'ELSED.h.patch']
 
     def get_recipe_env(self, arch=None, with_flags_in_cc=True):
         env = super().get_recipe_env(arch, with_flags_in_cc)

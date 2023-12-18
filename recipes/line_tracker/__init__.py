@@ -12,7 +12,7 @@ class LineTrackerRecipe(CppCompiledComponentsPythonRecipe):
     # url = 'https://github.com/KimSinjeong/elsed_eth_mr/archive/refs/heads/main.zip'
     url = 'git+https://github.com/AidynUbingazhibov/Mixed-Reality-Pybind.git'
 
-    depends = ['setuptools', 'pybind11', 'python3', 'opencv', 'opencv_extras']
+    depends = ['setuptools', 'pybind11', 'python3', 'opencv', 'opencv_extras', 'pyelsed']
     patches = ['CMakeLists.patch']
 
     def get_recipe_env(self, arch=None, with_flags_in_cc=True):
@@ -30,6 +30,11 @@ class LineTrackerRecipe(CppCompiledComponentsPythonRecipe):
         
         env['PYTHON_INCLUDE_DIR'] = python_inc_dir
         env['PYTHON_LIBRARY'] = python_lib_dir
+
+        elsed = self.get_recipe('pyelsed', self.ctx)
+        elsed = elsed.get_build_dir(arch.arch)
+        elsed_src_dir = join(elsed, 'src')
+        env['ELSED_SOURCE_DIR'] = elsed_src_dir
 
         return env
 

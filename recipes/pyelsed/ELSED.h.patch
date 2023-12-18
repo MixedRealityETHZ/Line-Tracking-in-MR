@@ -1,0 +1,18 @@
+--- ELSED/src/ELSED.h.orig	2023-12-18 04:55:46.585915652 +0100
++++ ELSED/src/ELSED.h	2023-12-18 04:56:27.517665736 +0100
+@@ -95,13 +95,14 @@
+   ImageEdges getSegmentEdges() const;
+ 
+   const EdgeDrawerPtr &getDrawer() const { return drawer; }
++  
++  ELSEDParams params;
+ 
+  private:
+   void drawAnchorPoints(const uint8_t *dirImg,
+                         const std::vector<Pixel> &anchorPoints,
+                         uint8_t *pEdgeImg);  // NOLINT
+ 
+-  ELSEDParams params;
+   LineDetectionExtraInfoPtr imgInfo;
+   ImageEdges edges;
+   Segments segments;
