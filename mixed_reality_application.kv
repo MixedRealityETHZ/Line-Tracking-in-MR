@@ -27,8 +27,9 @@
 
 
     MDBoxLayout:
+        id: wholeui
         orientation: 'horizontal'
-        size_hint: (1, 0.3)
+        size_hint: (1, 0.2)
         padding: 10
 
         Slider: # MDSlider class is defective and it makes the Android app crash. 
@@ -44,7 +45,7 @@
             on_touch_move: root.slider_callback()
 
         MDAnchorLayout:
-
+            id: bottomanchor
             # Have the AnchorLayout for the line buttons be on the bottom right side of the screen.
             # This doesn't work properly with a `MDBoxLayout` child...
             anchor_x: 'right'
@@ -66,8 +67,7 @@
                     pos_hint: {'right': 1}
 
                     on_press: self.negate_attribute(camera, '_show_tracked')
-
-
+                
                 NegateIconButton:
                     id: show_newly_detected_button
                     icon: 'new-box'
@@ -75,3 +75,26 @@
                     pos_hint: {'right': 1}
 
                     on_press: self.negate_attribute(camera, '_show_newly_detected')
+
+            MDBoxLayout:
+                orientation: 'vertical'
+                pos_hint: {'left': 0, 'center_y': .5}
+                NegateIconButton:
+                    id: is_ELSED_button
+                    icon: 'alpha-e-box-outline'
+                    alternate_icon: 'alpha-e-box'
+
+                    pos_hint: {'left': 0}
+
+                    on_press: self.negate_attribute(camera, '_is_ELSED_used', is_ELSED_button)
+                
+                NegateIconButton:
+                    id: is_detector_only
+                    icon: 'alpha-d-circle-outline'
+                    alternate_icon: 'alpha-d-circle'
+
+                    pos_hint: {'left': 0}
+
+                    on_press: self.negate_attribute(camera, '_is_detector_only')
+
+                

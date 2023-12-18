@@ -1,3 +1,7 @@
+# from kivy.config import Config
+# Config.set('graphics', 'maxfps', '30')
+
+from kivy.clock import Clock
 from kivymd.app import MDApp
 
 from kivy.lang import Builder
@@ -48,6 +52,8 @@ class AndroidCamera(Camera):
 
     _show_tracked = BooleanProperty(False)
     _show_newly_detected = BooleanProperty(False)
+    _is_ELSED_used = BooleanProperty(False)
+    _is_detector_only = BooleanProperty(False)
     _nr_afterimage_lines = NumericProperty(0); _nr_afterimage_min, _nr_afterimage_max = 0, 20 
     
     # Defining the `nr_afterimage_lines` and its setter to make certain
@@ -90,70 +96,81 @@ class AndroidCamera(Camera):
     def __frame_to_screen(self, frame, show_tracked:bool = True, show_newly_detected: bool = True):
         frame_rgba = cv2.cvtColor(frame, cv2.COLOR_BGR2RGBA)
 
-        self.trackerData.readImage(frame)
-        cur_img = self.trackerData.getCurImg()
+        if self._is_detector_only:
+            if self._is_ELSED_used:
+                gray = cv2.cvtColor(frame_rgba, cv2.COLOR_RGBA2GRAY)
+                segments, scores = pyelsed.detect(gray)
+                for s in segments.astype(np.int32):
+                    cv2.line(frame_rgba, (s[0], s[1]), (s[2], s[3]), (0, 255, 0, 255), 2, cv2.LINE_AA)
+            else:
+                pass
 
-        un_lines = cur_img.vecLine
-        lineIDs = cur_img.lineID
-        successes = cur_img.success
+        else:
+            self.trackerData.readImage(frame, self._is_ELSED_used)
+            cur_img = self.trackerData.getCurImg()
 
-        # Draw newly-detected lines.
-        if show_newly_detected:
-            for idx, un_line in enumerate(un_lines):
-                if successes[idx] != -1:
-                    continue # Ignore tracked lines
+            un_lines = cur_img.vecLine
+            lineIDs = cur_img.lineID
+            successes = cur_img.success
+
+            # Draw newly-detected lines.
+            if show_newly_detected:
+                for idx, un_line in enumerate(un_lines):
+                    if successes[idx] != -1:
+                        continue # Ignore tracked lines
 
 
-                start, end = un_line["keyPoint"][0], un_line["keyPoint"][-1]
-                start1, end1 = un_line["StartPt"], un_line["EndPt"]
+                    start, end = un_line["keyPoint"][0], un_line["keyPoint"][-1]
+                    start1, end1 = un_line["StartPt"], un_line["EndPt"]
 
-                cv2.line(frame_rgba, start, end, (0, 255, 0, 255), 2, cv2.LINE_AA)
-                # cv2.line(frame_rgba, start1, end1, (0, 255, 0), 1, cv2.LINE_AA)
-                cv2.putText(frame_rgba, str(lineIDs[idx]), un_line["keyPoint"][0], cv2.FONT_HERSHEY_SIMPLEX, 0.45, (255, 230, 0, 255), 1, cv2.LINE_AA)
+                    cv2.line(frame_rgba, start, end, (0, 255, 0, 255), 2, cv2.LINE_AA)
+                    # cv2.line(frame_rgba, start1, end1, (0, 255, 0), 1, cv2.LINE_AA)
+                    cv2.putText(frame_rgba, str(lineIDs[idx]), un_line["keyPoint"][0], cv2.FONT_HERSHEY_SIMPLEX, 0.45, (255, 230, 0, 255), 1, cv2.LINE_AA)
 
-        # Draw tracked lines.
-        if show_tracked:
-            for idx, un_line in enumerate (un_lines):
-                if successes[idx] == -1:
-                    continue # Ignore newly-detected lines
+            # Draw tracked lines.
+            if show_tracked:
+                for idx, un_line in enumerate (un_lines):
+                    if successes[idx] == -1:
+                        continue # Ignore newly-detected lines
 
-                start, end = un_line["keyPoint"][1], un_line["keyPoint"][-1]
-                start1, end1 = un_line["StartPt"], un_line["EndPt"]
+                    start, end = un_line["keyPoint"][1], un_line["keyPoint"][-1]
+                    start1, end1 = un_line["StartPt"], un_line["EndPt"]
 
-                cv2.line(frame_rgba, start, end, (255, 0, 0, 255), 2, cv2.LINE_AA)
-                # cv2.line(frame_rgba, start1, end1, (255, 0, 0), 1, cv2.LINE_AA)
-                cv2.putText(frame_rgba, str(lineIDs[idx]), un_line["keyPoint"][0], cv2.FONT_HERSHEY_SIMPLEX, 0.45, (255, 230, 0, 255), 1, cv2.LINE_AA)
-
-            
-        if self.nr_afterimage_lines > 0:
-
-            lineRec = cur_img.lineRec
-
-            # Declare constant that will be used for visualizing the lines.
-            lengthDiff = 0.4 / self.nr_afterimage_lines
-
-            for m in range(len(lineRec)):
-                lines = lineRec[m]
-                
-                # Show the afterimage using only the most recent line entries.
-                lines = lines[-min(len(lines), self.nr_afterimage_lines):]
-                lines = lines[::-1]
+                    cv2.line(frame_rgba, start, end, (255, 0, 0, 255), 2, cv2.LINE_AA)
+                    # cv2.line(frame_rgba, start1, end1, (255, 0, 0), 1, cv2.LINE_AA)
+                    cv2.putText(frame_rgba, str(lineIDs[idx]), un_line["keyPoint"][0], cv2.FONT_HERSHEY_SIMPLEX, 0.45, (255, 230, 0, 255), 1, cv2.LINE_AA)
 
                 
-                for j, line in enumerate(lines[:-1]): #-1 to ignore the final line, which is the currently tracked line.
+            if self.nr_afterimage_lines > 0:
 
-                    start, end = line['start'], line['end']
+                lineRec = cur_img.lineRec
 
-                    # Get inner points using parametric equations
-                    s = int((1 - lengthDiff * j) * start[0] + lengthDiff * j * end[0]),\
-                        int((1 - lengthDiff * j) * start[1] + lengthDiff * j * end[1])
+                # Declare constant that will be used for visualizing the lines.
+                lengthDiff = 0.4 / self.nr_afterimage_lines
+
+                for m in range(len(lineRec)):
+                    lines = lineRec[m]
                     
-                    e = int((1 - lengthDiff * j) * end[0] + lengthDiff * j * start[0]),\
-                        int((1 - lengthDiff * j) * end[1] + lengthDiff * j * start[1])
-                    
+                    # Show the afterimage using only the most recent line entries.
+                    lines = lines[-min(len(lines), self.nr_afterimage_lines):]
+                    lines = lines[::-1]
 
-                    cv2.line(frame_rgba, s, e, (colors[j][2], colors[j][1], colors[j][0], 255), 1, cv2.LINE_AA)
+                    
+                    for j, line in enumerate(lines[:-1]): #-1 to ignore the final line, which is the currently tracked line.
+
+                        start, end = line['start'], line['end']
+
+                        # Get inner points using parametric equations
+                        s = int((1 - lengthDiff * j) * start[0] + lengthDiff * j * end[0]),\
+                            int((1 - lengthDiff * j) * start[1] + lengthDiff * j * end[1])
+                        
+                        e = int((1 - lengthDiff * j) * end[0] + lengthDiff * j * start[0]),\
+                            int((1 - lengthDiff * j) * end[1] + lengthDiff * j * start[1])
+                        
+
+                        cv2.line(frame_rgba, s, e, (colors[j][2], colors[j][1], colors[j][0], 255), 1, cv2.LINE_AA)
         
+        frame_rgba = cv2.putText(frame_rgba, f'{int(round(Clock.get_fps()))}', (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255, 255), 2, cv2.LINE_AA)
             
         # frame_rgba = cv2.cvtColor(frame, cv2.COLOR_RGB2RGBA)
         self.texture.blit_buffer(frame_rgba.reshape(-1), colorfmt='rgba', bufferfmt='ubyte')
@@ -184,12 +201,17 @@ class AndroidCamera(Camera):
 
 class NegateIconButton(MDIconButton):
 
-    def negate_attribute(self, widget_instance: Widget, attribute_name: str, *args):
+    def negate_attribute(self, widget_instance: Widget, attribute_name: str, current_instance: Widget = None, *args):
 
         current_boolean_value = getattr(widget_instance, attribute_name)
 
         if type(current_boolean_value) == bool:
             setattr(widget_instance, attribute_name, not current_boolean_value)
+            if current_instance is not None:
+                if hasattr(current_instance, 'alternate_icon'):
+                    tmp = current_instance.icon
+                    current_instance.icon = current_instance.alternate_icon
+                    current_instance.alternate_icon = tmp
         else:
             raise TypeError(f'Expected {current_boolean_value} to be of type {bool}.'
                             f'{current_boolean_value} is of type {type(current_boolean_value)} instead.')
@@ -202,6 +224,7 @@ class MixedRealityApplicationLayout(MDFloatLayout):
 
 class MyApp(MDApp):
     def build(self):
+        # Clock.schedule_interval(lambda dt: print(Clock.get_fps()), 1)
         return MixedRealityApplicationLayout()
 
 if __name__ == '__main__':
