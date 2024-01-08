@@ -86,15 +86,15 @@
 
                     pos_hint: {'left': 0}
 
-                    on_press: self.negate_attribute(camera, '_is_ELSED_used', is_ELSED_button)
+                    on_press: self.negate_attribute(camera, '_is_ELSED_used', is_ELSED_button); self.dependence_negate_attribute(camera, '_is_detector_only', '_is_ELSED_used', False, False, is_detector_only)
                 
                 NegateIconButton:
                     id: is_detector_only
-                    icon: 'alpha-d-circle-outline'
-                    alternate_icon: 'alpha-d-circle'
+                    icon: 'alpha-d-box-outline'
+                    alternate_icon: 'alpha-d-box'
 
                     pos_hint: {'left': 0}
 
-                    on_press: self.negate_attribute(camera, '_is_detector_only')
+                    on_press: self.negate_attribute(camera, '_is_detector_only', is_detector_only) if getattr(camera, '_is_ELSED_used') == True else print() # The `print()` command does nothing.
 
                 

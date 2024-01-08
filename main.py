@@ -209,12 +209,28 @@ class NegateIconButton(MDIconButton):
             setattr(widget_instance, attribute_name, not current_boolean_value)
             if current_instance is not None:
                 if hasattr(current_instance, 'alternate_icon'):
-                    tmp = current_instance.icon
-                    current_instance.icon = current_instance.alternate_icon
-                    current_instance.alternate_icon = tmp
+                    # Swap icons.
+                    current_instance.icon, current_instance.alternate_icon = current_instance.alternate_icon, current_instance.icon
         else:
             raise TypeError(f'Expected {current_boolean_value} to be of type {bool}.'
                             f'{current_boolean_value} is of type {type(current_boolean_value)} instead.')
+        
+    def dependence_negate_attribute(
+        self, dependent_widget_instance: Widget,
+        change_attribute_name: str, check_attribute_name: str,
+        check_value: bool, set_value: bool,
+        current_instance: Widget = None
+    ):
+        if getattr(dependent_widget_instance, check_attribute_name) == check_value:
+            change_current_value = getattr(dependent_widget_instance, change_attribute_name)
+
+            # Negate the attribute's valueonly in the case where
+            # the change will result in the wanted`set_value`.
+            if change_current_value == (not set_value):
+                self.negate_attribute(dependent_widget_instance, change_attribute_name, current_instance)
+
+
+
 
 class MixedRealityApplicationLayout(MDFloatLayout):
     def slider_callback(self):
