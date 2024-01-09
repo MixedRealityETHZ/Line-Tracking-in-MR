@@ -1,0 +1,2 @@
+/usr/bin/ar qc libelsed_lib.a CMakeFiles/elsed_lib.dir/ELSED/src/EdgeDrawer.cpp.o CMakeFiles/elsed_lib.dir/ELSED/src/ELSED.cpp.o CMakeFiles/elsed_lib.dir/ELSED/src/FullSegmentInfo.cpp.o
+/usr/bin/ranlib libelsed_lib.a

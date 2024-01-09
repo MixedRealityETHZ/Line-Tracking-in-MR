@@ -1,0 +1,12 @@
+/home/aidyn/Desktop/mixed-reality-line-tracking/build/CMakeFiles/elsed_lib.dir
+/home/aidyn/Desktop/mixed-reality-line-tracking/build/CMakeFiles/proj.dir
+/home/aidyn/Desktop/mixed-reality-line-tracking/build/CMakeFiles/linefeature_tracker.dir
+/home/aidyn/Desktop/mixed-reality-line-tracking/build/CMakeFiles/line_tracker.dir
+/home/aidyn/Desktop/mixed-reality-line-tracking/build/CMakeFiles/edit_cache.dir
+/home/aidyn/Desktop/mixed-reality-line-tracking/build/CMakeFiles/rebuild_cache.dir
+/home/aidyn/Desktop/mixed-reality-line-tracking/build/ELSED/CMakeFiles/elsed.dir
+/home/aidyn/Desktop/mixed-reality-line-tracking/build/ELSED/CMakeFiles/elsed_main.dir
+/home/aidyn/Desktop/mixed-reality-line-tracking/build/ELSED/CMakeFiles/edit_cache.dir
+/home/aidyn/Desktop/mixed-reality-line-tracking/build/ELSED/CMakeFiles/rebuild_cache.dir
+/home/aidyn/Desktop/mixed-reality-line-tracking/build/pybind11/CMakeFiles/edit_cache.dir
+/home/aidyn/Desktop/mixed-reality-line-tracking/build/pybind11/CMakeFiles/rebuild_cache.dir

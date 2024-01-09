@@ -768,7 +768,7 @@ void LineFeatureTracker::readImage(const cv::Mat &_img, int elsed_bool)
     double min_edline_length = 0.125;
     upm::ELSED elsed;
     Ptr<cv::ximgproc::EdgeDrawing> ed = cv::ximgproc::createEdgeDrawing();
-    
+
     if (elsed_bool){
         elsed.params.gradientThreshold = 32;
         elsed.params.anchorThreshold = 16;

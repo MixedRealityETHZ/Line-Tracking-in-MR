@@ -1,0 +1,2 @@
+/usr/bin/ar qc liblinefeature_tracker.a CMakeFiles/linefeature_tracker.dir/src/linefeature_tracker.cpp.o
+/usr/bin/ranlib liblinefeature_tracker.a
