@@ -770,10 +770,13 @@ void LineFeatureTracker::readImage(const cv::Mat &_img, int elsed_bool)
     Ptr<cv::ximgproc::EdgeDrawing> ed = cv::ximgproc::createEdgeDrawing();
 
     if (elsed_bool){
-        elsed.params.gradientThreshold = 32;
-        elsed.params.anchorThreshold = 16;
-        elsed.params.scanIntervals = 2;
-        elsed.params.minLineLen = min_edline_length * (std::min(img.cols, img.rows));
+        ELSEDParams params;
+        params.gradientThreshold = 32;
+        params.anchorThreshold = 16;
+        params.scanIntervals = 2;
+        params.minLineLen = min_edline_length * (std::min(img.cols, img.rows));
+
+        elsed.setParams(params);
     } else{
         ed->params.EdgeDetectionOperator = cv::ximgproc::EdgeDrawing::SOBEL;
         ed->params.GradientThresholdValue = 32;
@@ -799,8 +802,11 @@ void LineFeatureTracker::readImage(const cv::Mat &_img, int elsed_bool)
         if (edlines.size() < linenum + addLineNum)
         {
             if (elsed_bool){
-                elsed.params.anchorThreshold *= 0.5;
-                elsed.params.scanIntervals *= 0.5;
+                ELSEDParams params = elsed.getParams();
+                params.anchorThreshold *= 0.5;
+                params.scanIntervals *= 0.5;
+
+                elsed.setParams(params);
                 edlines = elsed.detect(img);
             } else{
                 ed->params.AnchorThresholdValue *= 0.5;
