@@ -4,7 +4,7 @@ import numpy as np
 VIS_TRACK = False
 
 if __name__ == '__main__':
-    cap = cv2.VideoCapture("tests/test_video2.mp4")
+    cap = cv2.VideoCapture("tests/testvideo.mp4")
 
     if not cap.isOpened():
         print("Error opening video file")
@@ -22,7 +22,6 @@ if __name__ == '__main__':
     elsed = 0
 
     while True:
-        #print(frame)
         trackerData.readImage(frame, elsed)
         cur_img = trackerData.getCurImg()
         img = cur_img.img
@@ -84,7 +83,7 @@ if __name__ == '__main__':
             cv2.imshow("img", detect_img)
             cv2.waitKey(20)
             output_video.write(detect_img)
-        else:            
+        else:
             cv2.imshow("img", tmp_img)
             cv2.waitKey(20)
             output_video.write(tmp_img)
