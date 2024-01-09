@@ -211,16 +211,16 @@ CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 CMAKE_PROJECT_NAME:STATIC=line_tracker
 
 //Value Computed by CMake
-CMAKE_PROJECT_VERSION:STATIC=2.12.0
+CMAKE_PROJECT_VERSION:STATIC=2.11.1
 
 //Value Computed by CMake
 CMAKE_PROJECT_VERSION_MAJOR:STATIC=2
 
 //Value Computed by CMake
-CMAKE_PROJECT_VERSION_MINOR:STATIC=12
+CMAKE_PROJECT_VERSION_MINOR:STATIC=11
 
 //Value Computed by CMake
-CMAKE_PROJECT_VERSION_PATCH:STATIC=0
+CMAKE_PROJECT_VERSION_PATCH:STATIC=1
 
 //Value Computed by CMake
 CMAKE_PROJECT_VERSION_TWEAK:STATIC=
@@ -343,9 +343,6 @@ boost_system_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/boost_system-1.74.0
 //Dependencies for the target
 elsed_LIB_DEPENDS:STATIC=general;opencv_calib3d;general;opencv_core;general;opencv_dnn;general;opencv_features2d;general;opencv_flann;general;opencv_highgui;general;opencv_imgcodecs;general;opencv_imgproc;general;opencv_ml;general;opencv_objdetect;general;opencv_photo;general;opencv_shape;general;opencv_stitching;general;opencv_superres;general;opencv_video;general;opencv_videoio;general;opencv_videostab;general;opencv_aruco;general;opencv_bgsegm;general;opencv_bioinspired;general;opencv_ccalib;general;opencv_datasets;general;opencv_dnn_objdetect;general;opencv_dpm;general;opencv_face;general;opencv_freetype;general;opencv_fuzzy;general;opencv_hfs;general;opencv_img_hash;general;opencv_line_descriptor;general;opencv_optflow;general;opencv_phase_unwrapping;general;opencv_plot;general;opencv_reg;general;opencv_rgbd;general;opencv_saliency;general;opencv_sfm;general;opencv_stereo;general;opencv_structured_light;general;opencv_surface_matching;general;opencv_text;general;opencv_tracking;general;opencv_xfeatures2d;general;opencv_ximgproc;general;opencv_xobjdetect;general;opencv_xphoto;general;opencv_calib3d;general;opencv_core;general;opencv_dnn;general;opencv_features2d;general;opencv_flann;general;opencv_highgui;general;opencv_imgcodecs;general;opencv_imgproc;general;opencv_ml;general;opencv_objdetect;general;opencv_photo;general;opencv_shape;general;opencv_stitching;general;opencv_superres;general;opencv_video;general;opencv_videoio;general;opencv_videostab;general;opencv_aruco;general;opencv_bgsegm;general;opencv_bioinspired;general;opencv_ccalib;general;opencv_datasets;general;opencv_dnn_objdetect;general;opencv_dpm;general;opencv_face;general;opencv_freetype;general;opencv_fuzzy;general;opencv_hfs;general;opencv_img_hash;general;opencv_line_descriptor;general;opencv_optflow;general;opencv_phase_unwrapping;general;opencv_plot;general;opencv_reg;general;opencv_rgbd;general;opencv_saliency;general;opencv_sfm;general;opencv_stereo;general;opencv_structured_light;general;opencv_surface_matching;general;opencv_text;general;opencv_tracking;general;opencv_xfeatures2d;general;opencv_ximgproc;general;opencv_xobjdetect;general;opencv_xphoto;
 
-//Dependencies for the target
-elsed_lib_LIB_DEPENDS:STATIC=general;opencv_calib3d;general;opencv_core;general;opencv_dnn;general;opencv_features2d;general;opencv_flann;general;opencv_highgui;general;opencv_imgcodecs;general;opencv_imgproc;general;opencv_ml;general;opencv_objdetect;general;opencv_photo;general;opencv_shape;general;opencv_stitching;general;opencv_superres;general;opencv_video;general;opencv_videoio;general;opencv_videostab;general;opencv_aruco;general;opencv_bgsegm;general;opencv_bioinspired;general;opencv_ccalib;general;opencv_datasets;general;opencv_dnn_objdetect;general;opencv_dpm;general;opencv_face;general;opencv_freetype;general;opencv_fuzzy;general;opencv_hfs;general;opencv_img_hash;general;opencv_line_descriptor;general;opencv_optflow;general;opencv_phase_unwrapping;general;opencv_plot;general;opencv_reg;general;opencv_rgbd;general;opencv_saliency;general;opencv_sfm;general;opencv_stereo;general;opencv_structured_light;general;opencv_surface_matching;general;opencv_text;general;opencv_tracking;general;opencv_xfeatures2d;general;opencv_ximgproc;general;opencv_xobjdetect;general;opencv_xphoto;
-
 //Value Computed by CMake
 line_tracker_BINARY_DIR:STATIC=/home/aidyn/Desktop/mixed-reality-line-tracking/build
 
@@ -356,25 +353,25 @@ line_tracker_IS_TOP_LEVEL:STATIC=ON
 line_tracker_SOURCE_DIR:STATIC=/home/aidyn/Desktop/mixed-reality-line-tracking
 
 //Dependencies for the target
-linefeature_tracker_LIB_DEPENDS:STATIC=general;elsed_lib;general;opencv_calib3d;general;opencv_core;general;opencv_dnn;general;opencv_features2d;general;opencv_flann;general;opencv_highgui;general;opencv_imgcodecs;general;opencv_imgproc;general;opencv_ml;general;opencv_objdetect;general;opencv_photo;general;opencv_shape;general;opencv_stitching;general;opencv_superres;general;opencv_video;general;opencv_videoio;general;opencv_videostab;general;opencv_aruco;general;opencv_bgsegm;general;opencv_bioinspired;general;opencv_ccalib;general;opencv_datasets;general;opencv_dnn_objdetect;general;opencv_dpm;general;opencv_face;general;opencv_freetype;general;opencv_fuzzy;general;opencv_hfs;general;opencv_img_hash;general;opencv_line_descriptor;general;opencv_optflow;general;opencv_phase_unwrapping;general;opencv_plot;general;opencv_reg;general;opencv_rgbd;general;opencv_saliency;general;opencv_sfm;general;opencv_stereo;general;opencv_structured_light;general;opencv_surface_matching;general;opencv_text;general;opencv_tracking;general;opencv_xfeatures2d;general;opencv_ximgproc;general;opencv_xobjdetect;general;opencv_xphoto;general;Boost::filesystem;general;Boost::program_options;general;Boost::system;
+linefeature_tracker_LIB_DEPENDS:STATIC=general;elsed;general;opencv_calib3d;general;opencv_core;general;opencv_dnn;general;opencv_features2d;general;opencv_flann;general;opencv_highgui;general;opencv_imgcodecs;general;opencv_imgproc;general;opencv_ml;general;opencv_objdetect;general;opencv_photo;general;opencv_shape;general;opencv_stitching;general;opencv_superres;general;opencv_video;general;opencv_videoio;general;opencv_videostab;general;opencv_aruco;general;opencv_bgsegm;general;opencv_bioinspired;general;opencv_ccalib;general;opencv_datasets;general;opencv_dnn_objdetect;general;opencv_dpm;general;opencv_face;general;opencv_freetype;general;opencv_fuzzy;general;opencv_hfs;general;opencv_img_hash;general;opencv_line_descriptor;general;opencv_optflow;general;opencv_phase_unwrapping;general;opencv_plot;general;opencv_reg;general;opencv_rgbd;general;opencv_saliency;general;opencv_sfm;general;opencv_stereo;general;opencv_structured_light;general;opencv_surface_matching;general;opencv_text;general;opencv_tracking;general;opencv_xfeatures2d;general;opencv_ximgproc;general;opencv_xobjdetect;general;opencv_xphoto;general;Boost::filesystem;general;Boost::program_options;general;Boost::system;
 
 //Value Computed by CMake
-pybind11_BINARY_DIR:STATIC=/home/aidyn/Desktop/mixed-reality-line-tracking/build/pybind11
+pybind11_BINARY_DIR:STATIC=/home/aidyn/Desktop/mixed-reality-line-tracking/build/submodules/ELSED/pybind11
 
 //Value Computed by CMake
 pybind11_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
-pybind11_SOURCE_DIR:STATIC=/home/aidyn/Desktop/mixed-reality-line-tracking/pybind11
+pybind11_SOURCE_DIR:STATIC=/home/aidyn/Desktop/mixed-reality-line-tracking/submodules/ELSED/pybind11
 
 //Value Computed by CMake
-pyelsed_BINARY_DIR:STATIC=/home/aidyn/Desktop/mixed-reality-line-tracking/build/ELSED
+pyelsed_BINARY_DIR:STATIC=/home/aidyn/Desktop/mixed-reality-line-tracking/build/submodules/ELSED
 
 //Value Computed by CMake
 pyelsed_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
-pyelsed_SOURCE_DIR:STATIC=/home/aidyn/Desktop/mixed-reality-line-tracking/ELSED
+pyelsed_SOURCE_DIR:STATIC=/home/aidyn/Desktop/mixed-reality-line-tracking/submodules/ELSED
 
 
 ########################
@@ -517,7 +514,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=3
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=5
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -562,6 +559,10 @@ CMAKE_TAPI-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//Directory where ELSED headers are located
+ELSED_INCLUDE_DIR:INTERNAL=/home/aidyn/Desktop/mixed-reality-line-tracking/submodules/ELSED/src
+//ELSED Library
+ELSED_LIB:INTERNAL=elsed
 //Details about finding Boost
 FIND_PACKAGE_MESSAGE_DETAILS_Boost:INTERNAL=[/usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake][cfound components: filesystem program_options system ][v1.74.0()]
 //Details about finding OpenCV
@@ -572,7 +573,7 @@ FIND_PACKAGE_MESSAGE_DETAILS_PYTHON:INTERNAL=/usr/bin/python33.10.12
 FIND_PACKAGE_MESSAGE_DETAILS_PythonInterp:INTERNAL=[/usr/bin/python3][v3.10.12(3.6)]
 //Test HAS_FLTO
 HAS_FLTO:INTERNAL=1
-PYBIND11_INCLUDE_DIR:INTERNAL=/home/aidyn/Desktop/mixed-reality-line-tracking/pybind11/include
+PYBIND11_INCLUDE_DIR:INTERNAL=/home/aidyn/Desktop/mixed-reality-line-tracking/submodules/ELSED/pybind11/include
 //ADVANCED property for variable: PYTHON_EXECUTABLE
 PYTHON_EXECUTABLE-ADVANCED:INTERNAL=1
 PYTHON_INCLUDE_DIRS:INTERNAL=/usr/include/python3.10
@@ -580,13 +581,12 @@ PYTHON_IS_DEBUG:INTERNAL=0
 PYTHON_LIBRARIES:INTERNAL=/usr/lib/x86_64-linux-gnu/libpython3.10.so
 //ADVANCED property for variable: PYTHON_LIBRARY
 PYTHON_LIBRARY-ADVANCED:INTERNAL=1
-PYTHON_MODULE_DEBUG_POSTFIX:INTERNAL=
 PYTHON_MODULE_EXTENSION:INTERNAL=.cpython-310-x86_64-linux-gnu.so
 PYTHON_MODULE_PREFIX:INTERNAL=
 PYTHON_VERSION:INTERNAL=3.10.12
 PYTHON_VERSION_MAJOR:INTERNAL=3
 PYTHON_VERSION_MINOR:INTERNAL=10
-Python_ADDITIONAL_VERSIONS:INTERNAL=3.12;3.11;3.10;3.9;3.8;3.7;3.6
+Python_ADDITIONAL_VERSIONS:INTERNAL=3.11;3.10;3.9;3.8;3.7;3.6
 //linker supports push/pop state
 _CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED:INTERNAL=TRUE
 //CMAKE_INSTALL_PREFIX during last run
@@ -603,7 +603,7 @@ boost_system_DIR-ADVANCED:INTERNAL=1
 //True if pybind11 and all required components found on the system
 pybind11_FOUND:INTERNAL=TRUE
 //Directory where pybind11 headers are located
-pybind11_INCLUDE_DIR:INTERNAL=/home/aidyn/Desktop/mixed-reality-line-tracking/pybind11/include
+pybind11_INCLUDE_DIR:INTERNAL=/home/aidyn/Desktop/mixed-reality-line-tracking/submodules/ELSED/pybind11/include
 //Directories where pybind11 and possibly Python headers are located
-pybind11_INCLUDE_DIRS:INTERNAL=/home/aidyn/Desktop/mixed-reality-line-tracking/pybind11/include;/usr/include/python3.10
+pybind11_INCLUDE_DIRS:INTERNAL=/home/aidyn/Desktop/mixed-reality-line-tracking/submodules/pybind11/include;/usr/include/python3.10
 

@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DBOOST_ALL_NO_LIB -DBOOST_FILESYSTEM_DYN_LINK -DBOOST_PROGRAM_OPTIONS_DYN_LINK -DBOOST_SYSTEM_DYN_LINK
 
-CXX_INCLUDES = -I/usr/include/eigen3 -I/home/aidyn/Desktop/mixed-reality-line-tracking/ELSED/src -I/home/aidyn/Desktop/mixed-reality-line-tracking/include -isystem /usr/local/include/opencv
+CXX_INCLUDES = -I/usr/include/eigen3 -I/home/aidyn/Desktop/mixed-reality-line-tracking/include -I/home/aidyn/Desktop/mixed-reality-line-tracking/submodules/ELSED/src -isystem /usr/local/include/opencv
 
 CXX_FLAGS = -std=c++14 -O3 -Wall -g -std=gnu++14 -fPIC
 

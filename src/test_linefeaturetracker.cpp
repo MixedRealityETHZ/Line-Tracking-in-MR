@@ -30,25 +30,26 @@ int main() {
     start = std::chrono::steady_clock::now();
 
     //Per frame detection
-    upm::ELSED elsed;
     Ptr<cv::ximgproc::EdgeDrawing> ed = cv::ximgproc::createEdgeDrawing();
+    upm::ELSED elsed;
+
     double min_edline_length = 0.125;
 
     if (elsed_bool){
-        elsed.params.gradientThreshold = 32;
-        elsed.params.anchorThreshold = 16;
-        elsed.params.scanIntervals = 2;
-        elsed.params.minLineLen = min_edline_length * (std::min(frame.cols, frame.rows));
-    } else {
+        upm::ELSEDParams params;
+        params.gradientThreshold = 32;
+        params.anchorThreshold = 16;
+        params.scanIntervals = 2;
+        params.minLineLen = min_edline_length * (std::min(frame.cols, frame.rows));
+
+        elsed.setParams(params);
+    } else{
         ed->params.EdgeDetectionOperator = cv::ximgproc::EdgeDrawing::SOBEL;
         ed->params.GradientThresholdValue = 32;
         ed->params.AnchorThresholdValue = 16;
         ed->params.ScanInterval = 2;
-        //ed->params.MinLineLength = 90;
         ed->params.MinLineLength = min_edline_length * (std::min(frame.cols, frame.rows));
     }
-
-    
 
     // Main loop to process video frames
     for (;;)

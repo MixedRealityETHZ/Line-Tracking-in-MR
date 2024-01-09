@@ -578,8 +578,8 @@ CMakeFiles/proj.dir/src/test_linefeaturetracker.cpp.o: \
  /usr/include/eigen3/Eigen/src/Eigenvalues/GeneralizedEigenSolver.h \
  /usr/include/eigen3/Eigen/src/Eigenvalues/./RealQZ.h \
  /usr/include/eigen3/Eigen/src/Eigenvalues/MatrixBaseEigenvalues.h \
- /home/aidyn/Desktop/mixed-reality-line-tracking/ELSED/src/ELSED.h \
- /home/aidyn/Desktop/mixed-reality-line-tracking/ELSED/src/FullSegmentInfo.h \
- /home/aidyn/Desktop/mixed-reality-line-tracking/ELSED/src/Utils.h \
- /home/aidyn/Desktop/mixed-reality-line-tracking/ELSED/src/EdgeDrawer.h \
+ /home/aidyn/Desktop/mixed-reality-line-tracking/submodules/ELSED/src/ELSED.h \
+ /home/aidyn/Desktop/mixed-reality-line-tracking/submodules/ELSED/src/FullSegmentInfo.h \
+ /home/aidyn/Desktop/mixed-reality-line-tracking/submodules/ELSED/src/Utils.h \
+ /home/aidyn/Desktop/mixed-reality-line-tracking/submodules/ELSED/src/EdgeDrawer.h \
  /usr/include/c++/11/stack /usr/include/c++/11/bits/stl_stack.h

@@ -3,11 +3,11 @@
 
 CMakeFiles/linefeature_tracker.dir/src/linefeature_tracker.cpp.o
  /home/aidyn/Desktop/mixed-reality-line-tracking/src/linefeature_tracker.cpp
- /home/aidyn/Desktop/mixed-reality-line-tracking/ELSED/src/ELSED.h
- /home/aidyn/Desktop/mixed-reality-line-tracking/ELSED/src/EdgeDrawer.h
- /home/aidyn/Desktop/mixed-reality-line-tracking/ELSED/src/FullSegmentInfo.h
- /home/aidyn/Desktop/mixed-reality-line-tracking/ELSED/src/Utils.h
  /home/aidyn/Desktop/mixed-reality-line-tracking/include/linefeature_tracker.h
+ /home/aidyn/Desktop/mixed-reality-line-tracking/submodules/ELSED/src/ELSED.h
+ /home/aidyn/Desktop/mixed-reality-line-tracking/submodules/ELSED/src/EdgeDrawer.h
+ /home/aidyn/Desktop/mixed-reality-line-tracking/submodules/ELSED/src/FullSegmentInfo.h
+ /home/aidyn/Desktop/mixed-reality-line-tracking/submodules/ELSED/src/Utils.h
  /usr/include/alloca.h
  /usr/include/asm-generic/errno-base.h
  /usr/include/asm-generic/errno.h

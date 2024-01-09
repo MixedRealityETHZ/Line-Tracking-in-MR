@@ -44,8 +44,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/aidyn/Desktop/mixed-reality-line-tracking/build/ELSED/cmake_install.cmake")
-  include("/home/aidyn/Desktop/mixed-reality-line-tracking/build/pybind11/cmake_install.cmake")
+  include("/home/aidyn/Desktop/mixed-reality-line-tracking/build/submodules/cmake_install.cmake")
 
 endif()
 

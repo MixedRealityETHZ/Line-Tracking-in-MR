@@ -93,7 +93,7 @@ line_tracker_EXTERNAL_OBJECTS =
 line_tracker.cpython-310-x86_64-linux-gnu.so: CMakeFiles/line_tracker.dir/src/binder.cpp.o
 line_tracker.cpython-310-x86_64-linux-gnu.so: CMakeFiles/line_tracker.dir/build.make
 line_tracker.cpython-310-x86_64-linux-gnu.so: liblinefeature_tracker.a
-line_tracker.cpython-310-x86_64-linux-gnu.so: libelsed_lib.a
+line_tracker.cpython-310-x86_64-linux-gnu.so: submodules/ELSED/libelsed.a
 line_tracker.cpython-310-x86_64-linux-gnu.so: /usr/local/lib/libopencv_stitching.so.3.4.16
 line_tracker.cpython-310-x86_64-linux-gnu.so: /usr/local/lib/libopencv_superres.so.3.4.16
 line_tracker.cpython-310-x86_64-linux-gnu.so: /usr/local/lib/libopencv_videostab.so.3.4.16

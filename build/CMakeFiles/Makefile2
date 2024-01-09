@@ -63,94 +63,100 @@ CMAKE_BINARY_DIR = /home/aidyn/Desktop/mixed-reality-line-tracking/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/elsed_lib.dir/all
 all: CMakeFiles/proj.dir/all
 all: CMakeFiles/linefeature_tracker.dir/all
 all: CMakeFiles/line_tracker.dir/all
-all: ELSED/all
-all: pybind11/all
+all: submodules/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
-preinstall: ELSED/preinstall
-preinstall: pybind11/preinstall
+preinstall: submodules/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/elsed_lib.dir/clean
 clean: CMakeFiles/proj.dir/clean
 clean: CMakeFiles/linefeature_tracker.dir/clean
 clean: CMakeFiles/line_tracker.dir/clean
-clean: ELSED/clean
-clean: pybind11/clean
+clean: submodules/clean
 .PHONY : clean
 
 #=============================================================================
-# Directory level rules for directory ELSED
+# Directory level rules for directory submodules
 
 # Recursive "all" directory target.
-ELSED/all: ELSED/CMakeFiles/elsed.dir/all
-ELSED/all: ELSED/CMakeFiles/elsed_main.dir/all
-.PHONY : ELSED/all
+submodules/all: submodules/pybind11/all
+submodules/all: submodules/ELSED/all
+.PHONY : submodules/all
 
 # Recursive "preinstall" directory target.
-ELSED/preinstall:
-.PHONY : ELSED/preinstall
+submodules/preinstall: submodules/pybind11/preinstall
+submodules/preinstall: submodules/ELSED/preinstall
+.PHONY : submodules/preinstall
 
 # Recursive "clean" directory target.
-ELSED/clean: ELSED/CMakeFiles/elsed.dir/clean
-ELSED/clean: ELSED/CMakeFiles/elsed_main.dir/clean
-.PHONY : ELSED/clean
+submodules/clean: submodules/pybind11/clean
+submodules/clean: submodules/ELSED/clean
+.PHONY : submodules/clean
 
 #=============================================================================
-# Directory level rules for directory pybind11
+# Directory level rules for directory submodules/ELSED
 
 # Recursive "all" directory target.
-pybind11/all:
-.PHONY : pybind11/all
+submodules/ELSED/all: submodules/ELSED/CMakeFiles/elsed.dir/all
+submodules/ELSED/all: submodules/ELSED/CMakeFiles/elsed_main.dir/all
+submodules/ELSED/all: submodules/ELSED/CMakeFiles/pyelsed.dir/all
+submodules/ELSED/all: submodules/ELSED/pybind11/all
+.PHONY : submodules/ELSED/all
 
 # Recursive "preinstall" directory target.
-pybind11/preinstall:
-.PHONY : pybind11/preinstall
+submodules/ELSED/preinstall: submodules/ELSED/pybind11/preinstall
+.PHONY : submodules/ELSED/preinstall
 
 # Recursive "clean" directory target.
-pybind11/clean:
-.PHONY : pybind11/clean
+submodules/ELSED/clean: submodules/ELSED/CMakeFiles/elsed.dir/clean
+submodules/ELSED/clean: submodules/ELSED/CMakeFiles/elsed_main.dir/clean
+submodules/ELSED/clean: submodules/ELSED/CMakeFiles/pyelsed.dir/clean
+submodules/ELSED/clean: submodules/ELSED/pybind11/clean
+.PHONY : submodules/ELSED/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/elsed_lib.dir
+# Directory level rules for directory submodules/ELSED/pybind11
 
-# All Build rule for target.
-CMakeFiles/elsed_lib.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/elsed_lib.dir/build.make CMakeFiles/elsed_lib.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/elsed_lib.dir/build.make CMakeFiles/elsed_lib.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/aidyn/Desktop/mixed-reality-line-tracking/build/CMakeFiles --progress-num=5,6,7,8 "Built target elsed_lib"
-.PHONY : CMakeFiles/elsed_lib.dir/all
+# Recursive "all" directory target.
+submodules/ELSED/pybind11/all:
+.PHONY : submodules/ELSED/pybind11/all
 
-# Build rule for subdir invocation for target.
-CMakeFiles/elsed_lib.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/aidyn/Desktop/mixed-reality-line-tracking/build/CMakeFiles 4
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/elsed_lib.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/aidyn/Desktop/mixed-reality-line-tracking/build/CMakeFiles 0
-.PHONY : CMakeFiles/elsed_lib.dir/rule
+# Recursive "preinstall" directory target.
+submodules/ELSED/pybind11/preinstall:
+.PHONY : submodules/ELSED/pybind11/preinstall
 
-# Convenience name for target.
-elsed_lib: CMakeFiles/elsed_lib.dir/rule
-.PHONY : elsed_lib
+# Recursive "clean" directory target.
+submodules/ELSED/pybind11/clean:
+.PHONY : submodules/ELSED/pybind11/clean
 
-# clean rule for target.
-CMakeFiles/elsed_lib.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/elsed_lib.dir/build.make CMakeFiles/elsed_lib.dir/clean
-.PHONY : CMakeFiles/elsed_lib.dir/clean
+#=============================================================================
+# Directory level rules for directory submodules/pybind11
+
+# Recursive "all" directory target.
+submodules/pybind11/all:
+.PHONY : submodules/pybind11/all
+
+# Recursive "preinstall" directory target.
+submodules/pybind11/preinstall:
+.PHONY : submodules/pybind11/preinstall
+
+# Recursive "clean" directory target.
+submodules/pybind11/clean:
+.PHONY : submodules/pybind11/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/proj.dir
 
 # All Build rule for target.
-CMakeFiles/proj.dir/all: CMakeFiles/elsed_lib.dir/all
+CMakeFiles/proj.dir/all: submodules/ELSED/CMakeFiles/elsed.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/proj.dir/build.make CMakeFiles/proj.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/proj.dir/build.make CMakeFiles/proj.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/aidyn/Desktop/mixed-reality-line-tracking/build/CMakeFiles --progress-num=15,16,17 "Built target proj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/aidyn/Desktop/mixed-reality-line-tracking/build/CMakeFiles --progress-num=11,12,13 "Built target proj"
 .PHONY : CMakeFiles/proj.dir/all
 
 # Build rule for subdir invocation for target.
@@ -173,10 +179,10 @@ CMakeFiles/proj.dir/clean:
 # Target rules for target CMakeFiles/linefeature_tracker.dir
 
 # All Build rule for target.
-CMakeFiles/linefeature_tracker.dir/all: CMakeFiles/elsed_lib.dir/all
+CMakeFiles/linefeature_tracker.dir/all: submodules/ELSED/CMakeFiles/elsed.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/linefeature_tracker.dir/build.make CMakeFiles/linefeature_tracker.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/linefeature_tracker.dir/build.make CMakeFiles/linefeature_tracker.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/aidyn/Desktop/mixed-reality-line-tracking/build/CMakeFiles --progress-num=13,14 "Built target linefeature_tracker"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/aidyn/Desktop/mixed-reality-line-tracking/build/CMakeFiles --progress-num=9,10 "Built target linefeature_tracker"
 .PHONY : CMakeFiles/linefeature_tracker.dir/all
 
 # Build rule for subdir invocation for target.
@@ -199,11 +205,11 @@ CMakeFiles/linefeature_tracker.dir/clean:
 # Target rules for target CMakeFiles/line_tracker.dir
 
 # All Build rule for target.
-CMakeFiles/line_tracker.dir/all: CMakeFiles/elsed_lib.dir/all
 CMakeFiles/line_tracker.dir/all: CMakeFiles/linefeature_tracker.dir/all
+CMakeFiles/line_tracker.dir/all: submodules/ELSED/CMakeFiles/elsed.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/line_tracker.dir/build.make CMakeFiles/line_tracker.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/line_tracker.dir/build.make CMakeFiles/line_tracker.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/aidyn/Desktop/mixed-reality-line-tracking/build/CMakeFiles --progress-num=11,12 "Built target line_tracker"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/aidyn/Desktop/mixed-reality-line-tracking/build/CMakeFiles --progress-num=7,8 "Built target line_tracker"
 .PHONY : CMakeFiles/line_tracker.dir/all
 
 # Build rule for subdir invocation for target.
@@ -223,56 +229,82 @@ CMakeFiles/line_tracker.dir/clean:
 .PHONY : CMakeFiles/line_tracker.dir/clean
 
 #=============================================================================
-# Target rules for target ELSED/CMakeFiles/elsed.dir
+# Target rules for target submodules/ELSED/CMakeFiles/elsed.dir
 
 # All Build rule for target.
-ELSED/CMakeFiles/elsed.dir/all:
-	$(MAKE) $(MAKESILENT) -f ELSED/CMakeFiles/elsed.dir/build.make ELSED/CMakeFiles/elsed.dir/depend
-	$(MAKE) $(MAKESILENT) -f ELSED/CMakeFiles/elsed.dir/build.make ELSED/CMakeFiles/elsed.dir/build
+submodules/ELSED/CMakeFiles/elsed.dir/all:
+	$(MAKE) $(MAKESILENT) -f submodules/ELSED/CMakeFiles/elsed.dir/build.make submodules/ELSED/CMakeFiles/elsed.dir/depend
+	$(MAKE) $(MAKESILENT) -f submodules/ELSED/CMakeFiles/elsed.dir/build.make submodules/ELSED/CMakeFiles/elsed.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/aidyn/Desktop/mixed-reality-line-tracking/build/CMakeFiles --progress-num=1,2,3,4 "Built target elsed"
-.PHONY : ELSED/CMakeFiles/elsed.dir/all
+.PHONY : submodules/ELSED/CMakeFiles/elsed.dir/all
 
 # Build rule for subdir invocation for target.
-ELSED/CMakeFiles/elsed.dir/rule: cmake_check_build_system
+submodules/ELSED/CMakeFiles/elsed.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/aidyn/Desktop/mixed-reality-line-tracking/build/CMakeFiles 4
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ELSED/CMakeFiles/elsed.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 submodules/ELSED/CMakeFiles/elsed.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/aidyn/Desktop/mixed-reality-line-tracking/build/CMakeFiles 0
-.PHONY : ELSED/CMakeFiles/elsed.dir/rule
+.PHONY : submodules/ELSED/CMakeFiles/elsed.dir/rule
 
 # Convenience name for target.
-elsed: ELSED/CMakeFiles/elsed.dir/rule
+elsed: submodules/ELSED/CMakeFiles/elsed.dir/rule
 .PHONY : elsed
 
 # clean rule for target.
-ELSED/CMakeFiles/elsed.dir/clean:
-	$(MAKE) $(MAKESILENT) -f ELSED/CMakeFiles/elsed.dir/build.make ELSED/CMakeFiles/elsed.dir/clean
-.PHONY : ELSED/CMakeFiles/elsed.dir/clean
+submodules/ELSED/CMakeFiles/elsed.dir/clean:
+	$(MAKE) $(MAKESILENT) -f submodules/ELSED/CMakeFiles/elsed.dir/build.make submodules/ELSED/CMakeFiles/elsed.dir/clean
+.PHONY : submodules/ELSED/CMakeFiles/elsed.dir/clean
 
 #=============================================================================
-# Target rules for target ELSED/CMakeFiles/elsed_main.dir
+# Target rules for target submodules/ELSED/CMakeFiles/elsed_main.dir
 
 # All Build rule for target.
-ELSED/CMakeFiles/elsed_main.dir/all: ELSED/CMakeFiles/elsed.dir/all
-	$(MAKE) $(MAKESILENT) -f ELSED/CMakeFiles/elsed_main.dir/build.make ELSED/CMakeFiles/elsed_main.dir/depend
-	$(MAKE) $(MAKESILENT) -f ELSED/CMakeFiles/elsed_main.dir/build.make ELSED/CMakeFiles/elsed_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/aidyn/Desktop/mixed-reality-line-tracking/build/CMakeFiles --progress-num=9,10 "Built target elsed_main"
-.PHONY : ELSED/CMakeFiles/elsed_main.dir/all
+submodules/ELSED/CMakeFiles/elsed_main.dir/all: submodules/ELSED/CMakeFiles/elsed.dir/all
+	$(MAKE) $(MAKESILENT) -f submodules/ELSED/CMakeFiles/elsed_main.dir/build.make submodules/ELSED/CMakeFiles/elsed_main.dir/depend
+	$(MAKE) $(MAKESILENT) -f submodules/ELSED/CMakeFiles/elsed_main.dir/build.make submodules/ELSED/CMakeFiles/elsed_main.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/aidyn/Desktop/mixed-reality-line-tracking/build/CMakeFiles --progress-num=5,6 "Built target elsed_main"
+.PHONY : submodules/ELSED/CMakeFiles/elsed_main.dir/all
 
 # Build rule for subdir invocation for target.
-ELSED/CMakeFiles/elsed_main.dir/rule: cmake_check_build_system
+submodules/ELSED/CMakeFiles/elsed_main.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/aidyn/Desktop/mixed-reality-line-tracking/build/CMakeFiles 6
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ELSED/CMakeFiles/elsed_main.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 submodules/ELSED/CMakeFiles/elsed_main.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/aidyn/Desktop/mixed-reality-line-tracking/build/CMakeFiles 0
-.PHONY : ELSED/CMakeFiles/elsed_main.dir/rule
+.PHONY : submodules/ELSED/CMakeFiles/elsed_main.dir/rule
 
 # Convenience name for target.
-elsed_main: ELSED/CMakeFiles/elsed_main.dir/rule
+elsed_main: submodules/ELSED/CMakeFiles/elsed_main.dir/rule
 .PHONY : elsed_main
 
 # clean rule for target.
-ELSED/CMakeFiles/elsed_main.dir/clean:
-	$(MAKE) $(MAKESILENT) -f ELSED/CMakeFiles/elsed_main.dir/build.make ELSED/CMakeFiles/elsed_main.dir/clean
-.PHONY : ELSED/CMakeFiles/elsed_main.dir/clean
+submodules/ELSED/CMakeFiles/elsed_main.dir/clean:
+	$(MAKE) $(MAKESILENT) -f submodules/ELSED/CMakeFiles/elsed_main.dir/build.make submodules/ELSED/CMakeFiles/elsed_main.dir/clean
+.PHONY : submodules/ELSED/CMakeFiles/elsed_main.dir/clean
+
+#=============================================================================
+# Target rules for target submodules/ELSED/CMakeFiles/pyelsed.dir
+
+# All Build rule for target.
+submodules/ELSED/CMakeFiles/pyelsed.dir/all: submodules/ELSED/CMakeFiles/elsed.dir/all
+	$(MAKE) $(MAKESILENT) -f submodules/ELSED/CMakeFiles/pyelsed.dir/build.make submodules/ELSED/CMakeFiles/pyelsed.dir/depend
+	$(MAKE) $(MAKESILENT) -f submodules/ELSED/CMakeFiles/pyelsed.dir/build.make submodules/ELSED/CMakeFiles/pyelsed.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/aidyn/Desktop/mixed-reality-line-tracking/build/CMakeFiles --progress-num=14,15 "Built target pyelsed"
+.PHONY : submodules/ELSED/CMakeFiles/pyelsed.dir/all
+
+# Build rule for subdir invocation for target.
+submodules/ELSED/CMakeFiles/pyelsed.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aidyn/Desktop/mixed-reality-line-tracking/build/CMakeFiles 6
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 submodules/ELSED/CMakeFiles/pyelsed.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aidyn/Desktop/mixed-reality-line-tracking/build/CMakeFiles 0
+.PHONY : submodules/ELSED/CMakeFiles/pyelsed.dir/rule
+
+# Convenience name for target.
+pyelsed: submodules/ELSED/CMakeFiles/pyelsed.dir/rule
+.PHONY : pyelsed
+
+# clean rule for target.
+submodules/ELSED/CMakeFiles/pyelsed.dir/clean:
+	$(MAKE) $(MAKESILENT) -f submodules/ELSED/CMakeFiles/pyelsed.dir/build.make submodules/ELSED/CMakeFiles/pyelsed.dir/clean
+.PHONY : submodules/ELSED/CMakeFiles/pyelsed.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

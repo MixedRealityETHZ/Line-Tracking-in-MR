@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DBOOST_ALL_NO_LIB -DBOOST_FILESYSTEM_DYN_LINK -DBOOST_PROGRAM_OPTIONS_DYN_LINK -DBOOST_SYSTEM_DYN_LINK -Dline_tracker_EXPORTS
 
-CXX_INCLUDES = -I/usr/include/eigen3 -I/home/aidyn/Desktop/mixed-reality-line-tracking/ELSED/src -I/home/aidyn/Desktop/mixed-reality-line-tracking/include -isystem /usr/local/include/opencv -isystem /home/aidyn/Desktop/mixed-reality-line-tracking/pybind11/include -isystem /usr/include/python3.10
+CXX_INCLUDES = -I/usr/include/eigen3 -I/home/aidyn/Desktop/mixed-reality-line-tracking/include -I/home/aidyn/Desktop/mixed-reality-line-tracking/submodules/ELSED/src -isystem /usr/local/include/opencv -isystem /home/aidyn/Desktop/mixed-reality-line-tracking/submodules/pybind11/include -isystem /usr/include/python3.10
 
 CXX_FLAGS = -std=c++14 -O3 -Wall -g -std=gnu++14 -fPIC -fvisibility=hidden -flto -fno-fat-lto-objects
 

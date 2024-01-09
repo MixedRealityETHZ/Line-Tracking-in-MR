@@ -3,24 +3,22 @@
 
 CMakeFiles/line_tracker.dir/src/binder.cpp.o: /home/aidyn/Desktop/mixed-reality-line-tracking/src/binder.cpp \
   /home/aidyn/Desktop/mixed-reality-line-tracking/include/linefeature_tracker.h \
-  /home/aidyn/Desktop/mixed-reality-line-tracking/pybind11/include/pybind11/attr.h \
-  /home/aidyn/Desktop/mixed-reality-line-tracking/pybind11/include/pybind11/buffer_info.h \
-  /home/aidyn/Desktop/mixed-reality-line-tracking/pybind11/include/pybind11/cast.h \
-  /home/aidyn/Desktop/mixed-reality-line-tracking/pybind11/include/pybind11/complex.h \
-  /home/aidyn/Desktop/mixed-reality-line-tracking/pybind11/include/pybind11/detail/class.h \
-  /home/aidyn/Desktop/mixed-reality-line-tracking/pybind11/include/pybind11/detail/common.h \
-  /home/aidyn/Desktop/mixed-reality-line-tracking/pybind11/include/pybind11/detail/descr.h \
-  /home/aidyn/Desktop/mixed-reality-line-tracking/pybind11/include/pybind11/detail/init.h \
-  /home/aidyn/Desktop/mixed-reality-line-tracking/pybind11/include/pybind11/detail/internals.h \
-  /home/aidyn/Desktop/mixed-reality-line-tracking/pybind11/include/pybind11/detail/type_caster_base.h \
-  /home/aidyn/Desktop/mixed-reality-line-tracking/pybind11/include/pybind11/detail/typeid.h \
-  /home/aidyn/Desktop/mixed-reality-line-tracking/pybind11/include/pybind11/gil.h \
-  /home/aidyn/Desktop/mixed-reality-line-tracking/pybind11/include/pybind11/gil_safe_call_once.h \
-  /home/aidyn/Desktop/mixed-reality-line-tracking/pybind11/include/pybind11/numpy.h \
-  /home/aidyn/Desktop/mixed-reality-line-tracking/pybind11/include/pybind11/options.h \
-  /home/aidyn/Desktop/mixed-reality-line-tracking/pybind11/include/pybind11/pybind11.h \
-  /home/aidyn/Desktop/mixed-reality-line-tracking/pybind11/include/pybind11/pytypes.h \
-  /home/aidyn/Desktop/mixed-reality-line-tracking/pybind11/include/pybind11/typing.h \
+  /home/aidyn/Desktop/mixed-reality-line-tracking/submodules/pybind11/include/pybind11/attr.h \
+  /home/aidyn/Desktop/mixed-reality-line-tracking/submodules/pybind11/include/pybind11/buffer_info.h \
+  /home/aidyn/Desktop/mixed-reality-line-tracking/submodules/pybind11/include/pybind11/cast.h \
+  /home/aidyn/Desktop/mixed-reality-line-tracking/submodules/pybind11/include/pybind11/complex.h \
+  /home/aidyn/Desktop/mixed-reality-line-tracking/submodules/pybind11/include/pybind11/detail/class.h \
+  /home/aidyn/Desktop/mixed-reality-line-tracking/submodules/pybind11/include/pybind11/detail/common.h \
+  /home/aidyn/Desktop/mixed-reality-line-tracking/submodules/pybind11/include/pybind11/detail/descr.h \
+  /home/aidyn/Desktop/mixed-reality-line-tracking/submodules/pybind11/include/pybind11/detail/init.h \
+  /home/aidyn/Desktop/mixed-reality-line-tracking/submodules/pybind11/include/pybind11/detail/internals.h \
+  /home/aidyn/Desktop/mixed-reality-line-tracking/submodules/pybind11/include/pybind11/detail/type_caster_base.h \
+  /home/aidyn/Desktop/mixed-reality-line-tracking/submodules/pybind11/include/pybind11/detail/typeid.h \
+  /home/aidyn/Desktop/mixed-reality-line-tracking/submodules/pybind11/include/pybind11/gil.h \
+  /home/aidyn/Desktop/mixed-reality-line-tracking/submodules/pybind11/include/pybind11/numpy.h \
+  /home/aidyn/Desktop/mixed-reality-line-tracking/submodules/pybind11/include/pybind11/options.h \
+  /home/aidyn/Desktop/mixed-reality-line-tracking/submodules/pybind11/include/pybind11/pybind11.h \
+  /home/aidyn/Desktop/mixed-reality-line-tracking/submodules/pybind11/include/pybind11/pytypes.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/bitsperlong.h \
   /usr/include/asm-generic/errno-base.h \
@@ -97,7 +95,6 @@ CMakeFiles/line_tracker.dir/src/binder.cpp.o: /home/aidyn/Desktop/mixed-reality-
   /usr/include/c++/11/bits/sstream.tcc \
   /usr/include/c++/11/bits/std_abs.h \
   /usr/include/c++/11/bits/std_function.h \
-  /usr/include/c++/11/bits/std_mutex.h \
   /usr/include/c++/11/bits/stl_algo.h \
   /usr/include/c++/11/bits/stl_algobase.h \
   /usr/include/c++/11/bits/stl_bvector.h \
@@ -127,7 +124,6 @@ CMakeFiles/line_tracker.dir/src/binder.cpp.o: /home/aidyn/Desktop/mixed-reality-
   /usr/include/c++/11/bits/streambuf_iterator.h \
   /usr/include/c++/11/bits/stringfwd.h \
   /usr/include/c++/11/bits/uniform_int_dist.h \
-  /usr/include/c++/11/bits/unique_lock.h \
   /usr/include/c++/11/bits/unique_ptr.h \
   /usr/include/c++/11/bits/unordered_map.h \
   /usr/include/c++/11/bits/unordered_set.h \
@@ -179,7 +175,6 @@ CMakeFiles/line_tracker.dir/src/binder.cpp.o: /home/aidyn/Desktop/mixed-reality-
   /usr/include/c++/11/map \
   /usr/include/c++/11/math.h \
   /usr/include/c++/11/memory \
-  /usr/include/c++/11/mutex \
   /usr/include/c++/11/new \
   /usr/include/c++/11/numeric \
   /usr/include/c++/11/ostream \
@@ -808,13 +803,9 @@ CMakeFiles/line_tracker.dir/src/binder.cpp.o: /home/aidyn/Desktop/mixed-reality-
 
 /usr/local/include/opencv2/ximgproc/structured_edge_detection.hpp:
 
-/usr/local/include/opencv2/ximgproc/slic.hpp:
-
 /usr/local/include/opencv2/ximgproc/estimated_covariance.hpp:
 
 /usr/local/include/opencv2/ximgproc/edge_drawing.hpp:
-
-/usr/local/include/opencv2/xfeatures2d/cuda.hpp:
 
 /usr/local/include/opencv2/videostab/outlier_rejection.hpp:
 
@@ -900,8 +891,6 @@ CMakeFiles/line_tracker.dir/src/binder.cpp.o: /home/aidyn/Desktop/mixed-reality-
 
 /usr/local/include/opencv2/dnn/dnn.hpp:
 
-/usr/local/include/opencv2/dnn/dict.hpp:
-
 /usr/local/include/opencv2/core/utility.hpp:
 
 /usr/local/include/opencv2/core/types_c.h:
@@ -924,7 +913,7 @@ CMakeFiles/line_tracker.dir/src/binder.cpp.o: /home/aidyn/Desktop/mixed-reality-
 
 /usr/local/include/opencv2/core/cuda.hpp:
 
-/usr/local/include/opencv2/core/check.hpp:
+/usr/local/include/opencv2/core/bufferpool.hpp:
 
 /usr/local/include/opencv2/core/affine.hpp:
 
@@ -949,6 +938,8 @@ CMakeFiles/line_tracker.dir/src/binder.cpp.o: /home/aidyn/Desktop/mixed-reality-
 /usr/local/include/opencv2/core/vsx_utils.hpp:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/emmintrin.h:
+
+/usr/include/x86_64-linux-gnu/sys/types.h:
 
 /usr/include/x86_64-linux-gnu/sys/stat.h:
 
@@ -1008,7 +999,7 @@ CMakeFiles/line_tracker.dir/src/binder.cpp.o: /home/aidyn/Desktop/mixed-reality-
 
 /usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/time_t.h:
+/usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_statx_timestamp.h:
 
@@ -1198,6 +1189,8 @@ CMakeFiles/line_tracker.dir/src/binder.cpp.o: /home/aidyn/Desktop/mixed-reality-
 
 /usr/include/python3.10/pystate.h:
 
+/usr/include/python3.10/pyport.h:
+
 /usr/include/python3.10/pymem.h:
 
 /usr/include/python3.10/pymath.h:
@@ -1249,10 +1242,6 @@ CMakeFiles/line_tracker.dir/src/binder.cpp.o: /home/aidyn/Desktop/mixed-reality-
 /usr/include/python3.10/genericaliasobject.h:
 
 /usr/include/python3.10/frameobject.h:
-
-/usr/include/x86_64-linux-gnu/bits/unistd.h:
-
-/usr/include/python3.10/floatobject.h:
 
 /usr/include/python3.10/fileutils.h:
 
@@ -1306,23 +1295,33 @@ CMakeFiles/line_tracker.dir/src/binder.cpp.o: /home/aidyn/Desktop/mixed-reality-
 
 /usr/include/python3.10/cpython/ceval.h:
 
-/usr/local/include/opencv2/stitching/detail/matchers.hpp:
-
-/usr/local/include/opencv2/flann/random.h:
-
-/usr/include/python3.10/cpython/bytearrayobject.h:
-
 /usr/include/python3.10/complexobject.h:
 
-/usr/include/x86_64-linux-gnu/c++/11/bits/atomic_word.h:
+/usr/include/eigen3/Eigen/Core:
 
-/usr/include/python3.10/compile.h:
+/usr/include/eigen3/Eigen/Cholesky:
 
-/usr/include/python3.10/code.h:
+/usr/local/include/opencv2/ml.hpp:
 
-/usr/include/python3.10/classobject.h:
+/usr/include/eigen3/Eigen/src/Core/DenseBase.h:
 
-/usr/include/python3.10/ceval.h:
+/usr/local/include/opencv2/core/cvstd.hpp:
+
+/usr/include/eigen3/Eigen/src/Core/Ref.h:
+
+/usr/include/c++/11/version:
+
+/usr/include/ctype.h:
+
+/usr/local/include/opencv2/core/persistence.hpp:
+
+/usr/include/c++/11/iomanip:
+
+/usr/include/eigen3/Eigen/src/Core/arch/SSE/MathFunctions.h:
+
+/usr/include/c++/11/bits/hashtable.h:
+
+/usr/include/c++/11/set:
 
 /usr/include/python3.10/descrobject.h:
 
@@ -1330,13 +1329,15 @@ CMakeFiles/line_tracker.dir/src/binder.cpp.o: /home/aidyn/Desktop/mixed-reality-
 
 /usr/include/c++/11/ratio:
 
+/usr/include/x86_64-linux-gnu/bits/unistd.h:
+
+/usr/include/python3.10/floatobject.h:
+
+/home/aidyn/Desktop/mixed-reality-line-tracking/submodules/pybind11/include/pybind11/detail/internals.h:
+
 /usr/include/c++/11/ostream:
 
 /usr/include/c++/11/new:
-
-/usr/include/python3.10/pyport.h:
-
-/usr/include/c++/11/mutex:
 
 /usr/include/c++/11/math.h:
 
@@ -1362,10 +1363,6 @@ CMakeFiles/line_tracker.dir/src/binder.cpp.o: /home/aidyn/Desktop/mixed-reality-
 
 /usr/include/c++/11/istream:
 
-/usr/local/include/opencv2/stitching/detail/util_inl.hpp:
-
-/usr/include/c++/11/iosfwd:
-
 /usr/include/c++/11/ext/concurrence.h:
 
 /usr/include/c++/11/ios:
@@ -1388,6 +1385,8 @@ CMakeFiles/line_tracker.dir/src/binder.cpp.o: /home/aidyn/Desktop/mixed-reality-
 
 /usr/include/c++/11/iostream:
 
+/usr/include/c++/11/ext/atomicity.h:
+
 /usr/include/python3.10/cpython/pystate.h:
 
 /usr/include/c++/11/bits/stl_function.h:
@@ -1406,15 +1405,13 @@ CMakeFiles/line_tracker.dir/src/binder.cpp.o: /home/aidyn/Desktop/mixed-reality-
 
 /usr/include/c++/11/cwctype:
 
-/home/aidyn/Desktop/mixed-reality-line-tracking/pybind11/include/pybind11/gil.h:
+/usr/include/python3.10/cpython/pylifecycle.h:
+
+/usr/include/c++/11/cstdio:
 
 /usr/include/x86_64-linux-gnu/bits/mathcalls.h:
 
 /usr/include/c++/11/clocale:
-
-/usr/include/python3.10/cpython/pylifecycle.h:
-
-/usr/include/c++/11/cstdio:
 
 /usr/local/include/opencv2/flann/params.h:
 
@@ -1430,31 +1427,19 @@ CMakeFiles/line_tracker.dir/src/binder.cpp.o: /home/aidyn/Desktop/mixed-reality-
 
 /usr/include/eigen3/Eigen/src/Jacobi/Jacobi.h:
 
-/usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h:
-
-/usr/include/c++/11/bits/vector.tcc:
-
-/usr/include/c++/11/cstddef:
-
 /usr/include/c++/11/iterator:
 
 /usr/include/c++/11/bits/uses_allocator.h:
-
-/usr/include/c++/11/bits/unordered_set.h:
-
-/usr/include/c++/11/bits/unique_lock.h:
 
 /usr/include/x86_64-linux-gnu/bits/timesize.h:
 
 /usr/include/c++/11/bits/uniform_int_dist.h:
 
-/usr/local/include/opencv2/core/persistence.hpp:
+/home/aidyn/Desktop/mixed-reality-line-tracking/submodules/pybind11/include/pybind11/detail/typeid.h:
 
-/usr/include/c++/11/iomanip:
+/usr/local/include/opencv2/core/ptr.inl.hpp:
 
-/usr/include/ctype.h:
-
-/usr/include/eigen3/Eigen/src/Core/arch/SSE/MathFunctions.h:
+/usr/include/c++/11/bits/hash_bytes.h:
 
 /usr/local/include/opencv2/videoio/videoio_c.h:
 
@@ -1472,19 +1457,13 @@ CMakeFiles/line_tracker.dir/src/binder.cpp.o: /home/aidyn/Desktop/mixed-reality-
 
 /usr/include/c++/11/bits/stl_uninitialized.h:
 
-/usr/include/c++/11/tuple:
-
-/usr/include/eigen3/Eigen/src/Geometry/ParametrizedLine.h:
-
-/usr/include/c++/11/bits/move.h:
-
 /usr/include/c++/11/bits/stl_set.h:
 
 /usr/local/include/opencv2/flann/lsh_index.h:
 
 /usr/include/c++/11/functional:
 
-/home/aidyn/Desktop/mixed-reality-line-tracking/pybind11/include/pybind11/typing.h:
+/home/aidyn/Desktop/mixed-reality-line-tracking/submodules/pybind11/include/pybind11/detail/class.h:
 
 /usr/include/eigen3/Eigen/src/Core/arch/Default/BFloat16.h:
 
@@ -1494,9 +1473,19 @@ CMakeFiles/line_tracker.dir/src/binder.cpp.o: /home/aidyn/Desktop/mixed-reality-
 
 /usr/include/eigen3/Eigen/src/Core/CwiseNullaryOp.h:
 
+/usr/include/c++/11/stdexcept:
+
+/usr/include/c++/11/bits/stl_map.h:
+
 /usr/include/python3.10/cpython/dictobject.h:
 
 /usr/include/python3.10/bytesobject.h:
+
+/usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h:
+
+/usr/include/c++/11/bits/vector.tcc:
+
+/usr/include/c++/11/cstddef:
 
 /usr/include/x86_64-linux-gnu/sys/select.h:
 
@@ -1520,29 +1509,17 @@ CMakeFiles/line_tracker.dir/src/binder.cpp.o: /home/aidyn/Desktop/mixed-reality-
 
 /usr/include/eigen3/Eigen/src/Core/products/Parallelizer.h:
 
-/usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
+/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:
 
-/usr/include/c++/11/bits/basic_ios.tcc:
+/usr/include/c++/11/bits/stl_deque.h:
 
-/usr/include/c++/11/bits/allocated_ptr.h:
-
-/usr/include/c++/11/bits/basic_string.h:
-
-/usr/include/c++/11/bits/exception_defines.h:
+/usr/include/c++/11/array:
 
 /usr/include/c++/11/bits/alloc_traits.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
-
-/usr/include/c++/11/bits/std_mutex.h:
-
-/home/aidyn/Desktop/mixed-reality-line-tracking/pybind11/include/pybind11/detail/typeid.h:
 
 /usr/local/include/opencv2/core/base.hpp:
 
 /usr/include/eigen3/Eigen/src/Core/PlainObjectBase.h:
-
-/home/aidyn/Desktop/mixed-reality-line-tracking/pybind11/include/pybind11/options.h:
 
 /usr/local/include/opencv2/stitching/detail/blenders.hpp:
 
@@ -1554,35 +1531,39 @@ CMakeFiles/line_tracker.dir/src/binder.cpp.o: /home/aidyn/Desktop/mixed-reality-
 
 /usr/include/eigen3/Eigen/src/Core/arch/Default/GenericPacketMathFunctions.h:
 
-/usr/include/c++/11/bits/align.h:
+/usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
 
-/usr/include/c++/11/ext/alloc_traits.h:
+/usr/include/c++/11/bits/basic_ios.tcc:
 
-/usr/include/eigen3/Eigen/src/Core/StlIterators.h:
-
-/usr/include/c++/11/debug/assertions.h:
-
-/usr/include/c++/11/bits/streambuf_iterator.h:
+/usr/include/c++/11/bits/allocated_ptr.h:
 
 /usr/local/include/opencv2/photo/photo_c.h:
 
 /usr/include/assert.h:
 
+/usr/include/c++/11/bits/streambuf_iterator.h:
+
+/usr/include/c++/11/bits/parse_numbers.h:
+
+/usr/include/eigen3/Eigen/src/plugins/MatrixCwiseUnaryOps.h:
+
+/usr/include/c++/11/cerrno:
+
+/usr/include/alloca.h:
+
+/usr/local/include/opencv2/stitching.hpp:
+
+/usr/include/libintl.h:
+
+/usr/include/c++/11/bits/stl_numeric.h:
+
+/usr/include/c++/11/debug/assertions.h:
+
 /usr/include/c++/11/algorithm:
 
 /usr/include/c++/11/bits/enable_special_members.h:
 
-/usr/include/c++/11/bits/parse_numbers.h:
-
-/home/aidyn/Desktop/mixed-reality-line-tracking/pybind11/include/pybind11/detail/common.h:
-
-/usr/include/x86_64-linux-gnu/sys/types.h:
-
-/home/aidyn/Desktop/mixed-reality-line-tracking/pybind11/include/pybind11/complex.h:
-
-/usr/include/eigen3/Eigen/src/plugins/MatrixCwiseUnaryOps.h:
-
-/usr/include/c++/11/array:
+/usr/include/c++/11/bits/align.h:
 
 /usr/include/c++/11/bits/basic_ios.h:
 
@@ -1594,6 +1575,14 @@ CMakeFiles/line_tracker.dir/src/binder.cpp.o: /home/aidyn/Desktop/mixed-reality-
 
 /usr/include/c++/11/bits/char_traits.h:
 
+/usr/include/c++/11/backward/auto_ptr.h:
+
+/usr/include/python3.10/cpython/fileutils.h:
+
+/usr/include/c++/11/numeric:
+
+/usr/include/c++/11/bits/cpp_type_traits.h:
+
 /usr/include/c++/11/bits/stl_raw_storage_iter.h:
 
 /usr/include/c++/11/backward/binders.h:
@@ -1604,65 +1593,45 @@ CMakeFiles/line_tracker.dir/src/binder.cpp.o: /home/aidyn/Desktop/mixed-reality-
 
 /usr/include/eigen3/Eigen/src/LU/Determinant.h:
 
-/usr/include/c++/11/cctype:
+/usr/include/c++/11/bits/charconv.h:
 
-/usr/include/c++/11/map:
+/usr/include/c++/11/bits/istream.tcc:
 
-/usr/local/include/opencv2/core/core_c.h:
+/usr/include/c++/11/ctime:
 
-/usr/include/asm-generic/int-ll64.h:
+/usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h:
 
-/usr/include/c++/11/bits/cpp_type_traits.h:
+/usr/include/c++/11/bits/locale_classes.tcc:
 
-/usr/include/c++/11/backward/auto_ptr.h:
+/usr/local/include/opencv2/ximgproc/slic.hpp:
 
-/usr/include/python3.10/cpython/fileutils.h:
+/home/aidyn/Desktop/mixed-reality-line-tracking/submodules/pybind11/include/pybind11/detail/common.h:
 
-/usr/include/c++/11/numeric:
+/usr/include/python3.10/objimpl.h:
 
-/usr/include/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h:
+/usr/include/eigen3/Eigen/src/plugins/ReshapedMethods.h:
 
-/usr/include/c++/11/bits/stl_algobase.h:
+/usr/include/c++/11/bits/memoryfwd.h:
 
-/usr/include/python3.10/methodobject.h:
+/usr/include/eigen3/Eigen/src/Core/util/XprHelper.h:
 
-/usr/include/c++/11/bits/allocator.h:
+/usr/include/x86_64-linux-gnu/bits/byteswap.h:
 
-/home/aidyn/Desktop/mixed-reality-line-tracking/pybind11/include/pybind11/detail/type_caster_base.h:
+/usr/include/c++/11/list:
 
-/usr/local/include/opencv2/ximgproc/edgeboxes.hpp:
+/usr/include/c++/11/bits/atomic_base.h:
 
-/usr/include/c++/11/bits/locale_facets.tcc:
+/usr/include/c++/11/bits/stl_multiset.h:
 
-/usr/include/eigen3/Eigen/src/misc/Image.h:
+/usr/include/eigen3/Eigen/src/Core/Dot.h:
 
-/usr/include/c++/11/bits/shared_ptr.h:
+/usr/include/eigen3/Eigen/src/Geometry/RotationBase.h:
 
-/usr/local/include/opencv2/features2d.hpp:
-
-/usr/include/c++/11/string:
-
-/usr/local/include/opencv2/imgproc.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
-
-/usr/include/eigen3/Eigen/src/plugins/MatrixCwiseBinaryOps.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:
-
-/usr/include/c++/11/bits/stl_deque.h:
-
-/usr/include/c++/11/set:
-
-/home/aidyn/Desktop/mixed-reality-line-tracking/pybind11/include/pybind11/buffer_info.h:
-
-/usr/include/eigen3/Eigen/src/Core/ProductEvaluators.h:
+/usr/include/c++/11/bits/shared_ptr_base.h:
 
 /usr/local/include/opencv2/ml/ml.inl.hpp:
 
 /usr/include/c++/11/bits/cxxabi_init_exception.h:
-
-/usr/include/c++/11/bits/shared_ptr_base.h:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/time_members.h:
 
@@ -1678,61 +1647,23 @@ CMakeFiles/line_tracker.dir/src/binder.cpp.o: /home/aidyn/Desktop/mixed-reality-
 
 /usr/include/eigen3/Eigen/src/Core/functors/AssignmentFunctors.h:
 
-/usr/local/include/opencv2/core/ptr.inl.hpp:
+/usr/include/eigen3/Eigen/src/Core/Reverse.h:
 
-/usr/include/c++/11/bits/hash_bytes.h:
+/usr/include/c++/11/bits/unordered_set.h:
 
-/usr/include/c++/11/ext/atomicity.h:
+/home/aidyn/Desktop/mixed-reality-line-tracking/submodules/pybind11/include/pybind11/numpy.h:
 
-/home/aidyn/Desktop/mixed-reality-line-tracking/pybind11/include/pybind11/cast.h:
+/usr/local/include/opencv2/imgproc/types_c.h:
 
-/usr/local/include/opencv2/videostab/frame_source.hpp:
+/usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h:
 
-/usr/include/c++/11/bits/deque.tcc:
+/usr/include/c++/11/bits/locale_conv.h:
 
-/home/aidyn/Desktop/mixed-reality-line-tracking/pybind11/include/pybind11/pybind11.h:
+/usr/include/eigen3/Eigen/src/Cholesky/LDLT.h:
 
-/usr/include/eigen3/Eigen/src/Eigenvalues/SelfAdjointEigenSolver.h:
+/usr/include/stdlib.h:
 
-/usr/local/include/opencv2/core/bufferpool.hpp:
-
-/home/aidyn/Desktop/mixed-reality-line-tracking/pybind11/include/pybind11/pytypes.h:
-
-/home/aidyn/Desktop/mixed-reality-line-tracking/pybind11/include/pybind11/detail/class.h:
-
-/usr/include/asm-generic/types.h:
-
-/usr/include/asm-generic/errno-base.h:
-
-/usr/include/c++/11/cerrno:
-
-/usr/include/alloca.h:
-
-/usr/local/include/opencv2/stitching.hpp:
-
-/usr/include/libintl.h:
-
-/usr/include/c++/11/bits/stl_numeric.h:
-
-/home/aidyn/Desktop/mixed-reality-line-tracking/pybind11/include/pybind11/numpy.h:
-
-/usr/local/include/opencv2/shape/emdL1.hpp:
-
-/usr/include/c++/11/queue:
-
-/usr/local/include/opencv2/videostab/inpainting.hpp:
-
-/usr/include/c++/11/bits/unique_ptr.h:
-
-/usr/include/c++/11/bits/atomic_base.h:
-
-/usr/include/c++/11/bits/stl_bvector.h:
-
-/usr/include/eigen3/Eigen/src/Core/products/SelfadjointRank2Update.h:
-
-/usr/include/eigen3/Eigen/src/Core/SelfAdjointView.h:
-
-/usr/include/c++/11/bits/functexcept.h:
+/usr/include/c++/11/bits/locale_facets.h:
 
 /usr/include/c++/11/initializer_list:
 
@@ -1742,27 +1673,61 @@ CMakeFiles/line_tracker.dir/src/binder.cpp.o: /home/aidyn/Desktop/mixed-reality-
 
 /usr/include/python3.10/Python.h:
 
-/usr/include/stdlib.h:
+/usr/include/c++/11/tuple:
 
-/usr/include/c++/11/bits/locale_facets.h:
+/usr/include/eigen3/Eigen/src/Geometry/ParametrizedLine.h:
 
-/usr/include/c++/11/bits/sstream.tcc:
+/usr/include/c++/11/bits/move.h:
 
-/usr/include/x86_64-linux-gnu/bits/fp-logb.h:
+/usr/local/include/opencv2/stitching/detail/matchers.hpp:
 
-/usr/include/python3.10/tupleobject.h:
+/usr/local/include/opencv2/flann/random.h:
 
-/usr/include/eigen3/Eigen/src/Core/NumTraits.h:
+/usr/include/python3.10/cpython/bytearrayobject.h:
 
-/home/aidyn/Desktop/mixed-reality-line-tracking/pybind11/include/pybind11/attr.h:
+/home/aidyn/Desktop/mixed-reality-line-tracking/submodules/pybind11/include/pybind11/attr.h:
 
-/usr/include/eigen3/Eigen/QR:
+/usr/include/c++/11/cctype:
 
-/usr/include/c++/11/bits/stl_map.h:
+/usr/include/c++/11/map:
 
-/usr/include/c++/11/stdexcept:
+/usr/local/include/opencv2/core/core_c.h:
 
-/usr/include/c++/11/bits/hashtable.h:
+/usr/include/asm-generic/int-ll64.h:
+
+/usr/include/asm-generic/types.h:
+
+/usr/include/asm-generic/errno-base.h:
+
+/usr/include/eigen3/Eigen/src/Core/StlIterators.h:
+
+/usr/include/c++/11/ext/alloc_traits.h:
+
+/usr/local/include/opencv2/dnn/dict.hpp:
+
+/home/aidyn/Desktop/mixed-reality-line-tracking/submodules/pybind11/include/pybind11/detail/type_caster_base.h:
+
+/usr/include/c++/11/bits/ostream.tcc:
+
+/usr/local/include/opencv2/shape/emdL1.hpp:
+
+/usr/include/c++/11/queue:
+
+/usr/local/include/opencv2/videostab/inpainting.hpp:
+
+/usr/include/c++/11/bits/unique_ptr.h:
+
+/usr/include/eigen3/Eigen/src/Core/products/SelfadjointMatrixMatrix.h:
+
+/usr/include/asm-generic/errno.h:
+
+/home/aidyn/Desktop/mixed-reality-line-tracking/submodules/pybind11/include/pybind11/cast.h:
+
+/usr/local/include/opencv2/flann/nn_index.h:
+
+/usr/include/linux/errno.h:
+
+/usr/include/eigen3/Eigen/src/Eigenvalues/SelfAdjointEigenSolver.h:
 
 /usr/local/include/opencv2/ximgproc/weighted_median_filter.hpp:
 
@@ -1770,43 +1735,39 @@ CMakeFiles/line_tracker.dir/src/binder.cpp.o: /home/aidyn/Desktop/mixed-reality-
 
 /usr/include/eigen3/Eigen/src/Geometry/Umeyama.h:
 
-/home/aidyn/Desktop/mixed-reality-line-tracking/pybind11/include/pybind11/detail/descr.h:
+/usr/local/include/opencv2/stitching/detail/util_inl.hpp:
 
-/usr/include/eigen3/Eigen/src/SVD/SVDBase.h:
+/usr/include/c++/11/iosfwd:
 
-/home/aidyn/Desktop/mixed-reality-line-tracking/pybind11/include/pybind11/detail/internals.h:
+/home/aidyn/Desktop/mixed-reality-line-tracking/submodules/pybind11/include/pybind11/options.h:
 
-/usr/include/python3.10/codecs.h:
+/usr/include/c++/11/bits/basic_string.h:
 
-/usr/include/c++/11/exception:
+/usr/local/include/opencv2/xfeatures2d/cuda.hpp:
 
-/usr/include/c++/11/bits/stl_multiset.h:
+/home/aidyn/Desktop/mixed-reality-line-tracking/submodules/pybind11/include/pybind11/complex.h:
 
-/home/aidyn/Desktop/mixed-reality-line-tracking/pybind11/include/pybind11/detail/init.h:
+/usr/include/c++/11/bits/exception_defines.h:
 
-/usr/include/eigen3/Eigen/src/Core/Dot.h:
+/usr/include/x86_64-linux-gnu/bits/types/time_t.h:
 
-/usr/include/eigen3/Eigen/src/Geometry/RotationBase.h:
+/home/aidyn/Desktop/mixed-reality-line-tracking/submodules/pybind11/include/pybind11/pybind11.h:
 
-/usr/include/c++/11/bits/exception.h:
+/usr/include/eigen3/Eigen/src/Householder/Householder.h:
 
-/usr/include/c++/11/bits/forward_list.tcc:
+/usr/include/c++/11/bits/locale_facets_nonio.h:
 
-/usr/include/c++/11/bits/ios_base.h:
+/usr/local/include/opencv2/core/check.hpp:
 
-/usr/include/c++/11/bits/charconv.h:
-
-/usr/include/c++/11/bits/istream.tcc:
-
-/usr/include/c++/11/ctime:
-
-/usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h:
-
-/usr/include/c++/11/bits/locale_classes.tcc:
+/home/aidyn/Desktop/mixed-reality-line-tracking/submodules/pybind11/include/pybind11/pytypes.h:
 
 /usr/include/python3.10/cpython/code.h:
 
 /usr/include/c++/11/bits/cxxabi_forced.h:
+
+/usr/local/include/opencv2/videostab/frame_source.hpp:
+
+/usr/include/c++/11/bits/deque.tcc:
 
 /usr/include/eigen3/Eigen/src/Core/MatrixBase.h:
 
@@ -1826,15 +1787,75 @@ CMakeFiles/line_tracker.dir/src/binder.cpp.o: /home/aidyn/Desktop/mixed-reality-
 
 /usr/include/eigen3/Eigen/src/Core/arch/Default/GenericPacketMathFunctionsFwd.h:
 
+/usr/local/include/opencv2/ximgproc/edgeboxes.hpp:
+
+/usr/include/c++/11/bits/locale_facets.tcc:
+
+/usr/include/eigen3/Eigen/src/misc/Image.h:
+
+/usr/include/c++/11/bits/shared_ptr.h:
+
+/usr/local/include/opencv2/features2d.hpp:
+
+/usr/include/c++/11/string:
+
+/usr/local/include/opencv2/imgproc.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
+
+/usr/include/eigen3/Eigen/src/plugins/MatrixCwiseBinaryOps.h:
+
+/usr/include/python3.10/methodobject.h:
+
+/usr/include/c++/11/bits/allocator.h:
+
+/usr/include/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h:
+
+/usr/include/c++/11/bits/stl_algobase.h:
+
+/usr/include/c++/11/bits/stl_bvector.h:
+
+/usr/include/eigen3/Eigen/src/Core/products/SelfadjointRank2Update.h:
+
+/usr/include/stdio.h:
+
+/usr/include/c++/11/streambuf:
+
+/usr/include/c++/11/bits/ostream_insert.h:
+
+/usr/include/eigen3/Eigen/src/Core/util/Constants.h:
+
 /usr/include/c++/11/bits/hashtable_policy.h:
 
 /usr/include/c++/11/bits/invoke.h:
+
+/usr/include/c++/11/bits/exception.h:
+
+/usr/include/c++/11/bits/forward_list.tcc:
+
+/usr/include/c++/11/bits/ios_base.h:
+
+/usr/include/eigen3/Eigen/src/Geometry/Rotation2D.h:
+
+/usr/include/c++/11/bits/atomic_lockfree_defines.h:
+
+/usr/include/c++/11/bits/locale_classes.h:
 
 /usr/include/eigen3/Eigen/src/plugins/CommonCwiseBinaryOps.h:
 
 /usr/local/include/opencv2/ximgproc/sparse_match_interpolator.hpp:
 
 /usr/include/c++/11/bits/list.tcc:
+
+/usr/include/c++/11/vector:
+
+/usr/include/x86_64-linux-gnu/bits/getopt_core.h:
+
+/usr/include/eigen3/Eigen/src/Core/DenseCoeffsBase.h:
+
+/usr/include/eigen3/Eigen/src/Core/ConditionEstimator.h:
+
+/usr/include/eigen3/Eigen/src/Core/IndexedView.h:
 
 /usr/include/asm-generic/bitsperlong.h:
 
@@ -1845,8 +1866,6 @@ CMakeFiles/line_tracker.dir/src/binder.cpp.o: /home/aidyn/Desktop/mixed-reality-
 /usr/include/python3.10/cpython/pyerrors.h:
 
 /usr/include/eigen3/Eigen/src/Core/Assign.h:
-
-/usr/include/c++/11/bits/locale_facets_nonio.h:
 
 /usr/include/c++/11/bits/postypes.h:
 
@@ -1878,41 +1897,17 @@ CMakeFiles/line_tracker.dir/src/binder.cpp.o: /home/aidyn/Desktop/mixed-reality-
 
 /usr/include/linux/stddef.h:
 
-/usr/include/c++/11/bits/memoryfwd.h:
+/home/aidyn/Desktop/mixed-reality-line-tracking/submodules/pybind11/include/pybind11/detail/descr.h:
 
-/usr/include/eigen3/Eigen/src/Core/util/XprHelper.h:
+/usr/include/errno.h:
 
-/usr/include/x86_64-linux-gnu/bits/byteswap.h:
-
-/usr/include/c++/11/list:
-
-/usr/include/stdio.h:
-
-/usr/include/c++/11/streambuf:
-
-/usr/include/eigen3/Eigen/src/Core/util/Constants.h:
-
-/usr/include/c++/11/bits/ostream_insert.h:
-
-/usr/include/asm-generic/errno.h:
-
-/usr/include/eigen3/Eigen/src/Core/products/SelfadjointMatrixMatrix.h:
-
-/usr/include/c++/11/bits/atomic_lockfree_defines.h:
-
-/usr/include/c++/11/bits/locale_classes.h:
-
-/usr/include/eigen3/Eigen/src/Geometry/Rotation2D.h:
-
-/usr/include/c++/11/bits/ostream.tcc:
+/usr/include/eigen3/Eigen/src/Core/GeneralProduct.h:
 
 /usr/include/c++/11/bits/basic_string.tcc:
 
 /usr/include/c++/11/bits/ptr_traits.h:
 
 /usr/include/c++/11/ext/aligned_buffer.h:
-
-/home/aidyn/Desktop/mixed-reality-line-tracking/pybind11/include/pybind11/gil_safe_call_once.h:
 
 /usr/include/linux/close_range.h:
 
@@ -1942,41 +1937,27 @@ CMakeFiles/line_tracker.dir/src/binder.cpp.o: /home/aidyn/Desktop/mixed-reality-
 
 /usr/include/c++/11/bits/fstream.tcc:
 
+/usr/include/c++/11/bits/sstream.tcc:
+
+/usr/include/x86_64-linux-gnu/bits/fp-logb.h:
+
+/usr/include/python3.10/tupleobject.h:
+
+/usr/include/eigen3/Eigen/src/Core/NumTraits.h:
+
 /usr/include/eigen3/Eigen/src/Core/Reshaped.h:
 
 /usr/local/include/opencv2/flann/logger.h:
 
 /usr/include/eigen3/Eigen/src/Eigenvalues/GeneralizedEigenSolver.h:
 
-/usr/include/c++/11/vector:
-
-/usr/include/x86_64-linux-gnu/bits/getopt_core.h:
-
-/usr/include/eigen3/Eigen/src/Core/DenseCoeffsBase.h:
-
-/usr/include/c++/11/version:
-
-/usr/include/eigen3/Eigen/src/Core/IndexedView.h:
-
-/usr/include/eigen3/Eigen/src/Core/ConditionEstimator.h:
-
-/usr/include/eigen3/Eigen/Cholesky:
-
-/usr/local/include/opencv2/ml.hpp:
-
-/usr/include/eigen3/Eigen/src/Core/DenseBase.h:
-
-/usr/local/include/opencv2/core/cvstd.hpp:
-
-/usr/include/eigen3/Eigen/src/Core/Ref.h:
-
-/usr/include/eigen3/Eigen/Core:
-
 /usr/include/eigen3/Eigen/Dense:
 
 /usr/include/x86_64-linux-gnu/bits/posix2_lim.h:
 
 /usr/include/python3.10/tracemalloc.h:
+
+/home/aidyn/Desktop/mixed-reality-line-tracking/submodules/pybind11/include/pybind11/buffer_info.h:
 
 /usr/include/eigen3/Eigen/Eigenvalues:
 
@@ -2004,13 +1985,7 @@ CMakeFiles/line_tracker.dir/src/binder.cpp.o: /home/aidyn/Desktop/mixed-reality-
 
 /usr/include/eigen3/Eigen/LU:
 
-/usr/local/include/opencv2/imgproc/types_c.h:
-
-/usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h:
-
-/usr/include/c++/11/bits/locale_conv.h:
-
-/usr/include/eigen3/Eigen/src/Cholesky/LDLT.h:
+/usr/include/eigen3/Eigen/QR:
 
 /usr/include/c++/11/unordered_set:
 
@@ -2041,10 +2016,6 @@ CMakeFiles/line_tracker.dir/src/binder.cpp.o: /home/aidyn/Desktop/mixed-reality-
 /usr/include/c++/11/bits/stl_pair.h:
 
 /usr/include/eigen3/Eigen/src/Core/DenseStorage.h:
-
-/usr/include/python3.10/objimpl.h:
-
-/usr/include/eigen3/Eigen/src/plugins/ReshapedMethods.h:
 
 /usr/include/eigen3/Eigen/src/Core/ArrayWrapper.h:
 
@@ -2088,10 +2059,6 @@ CMakeFiles/line_tracker.dir/src/binder.cpp.o: /home/aidyn/Desktop/mixed-reality-
 
 /usr/include/eigen3/Eigen/src/Eigenvalues/Tridiagonalization.h:
 
-/usr/include/errno.h:
-
-/usr/include/eigen3/Eigen/src/Core/GeneralProduct.h:
-
 /usr/include/eigen3/Eigen/src/Core/IO.h:
 
 /usr/include/eigen3/Eigen/src/Core/Inverse.h:
@@ -2114,6 +2081,8 @@ CMakeFiles/line_tracker.dir/src/binder.cpp.o: /home/aidyn/Desktop/mixed-reality-
 
 /usr/include/features.h:
 
+/usr/include/python3.10/classobject.h:
+
 /usr/include/c++/11/bits/algorithmfwd.h:
 
 /usr/include/eigen3/Eigen/src/Core/NoAlias.h:
@@ -2126,6 +2095,8 @@ CMakeFiles/line_tracker.dir/src/binder.cpp.o: /home/aidyn/Desktop/mixed-reality-
 
 /usr/include/eigen3/Eigen/src/Core/functors/UnaryFunctors.h:
 
+/usr/include/eigen3/Eigen/src/Core/ProductEvaluators.h:
+
 /usr/include/python3.10/cpython/bytesobject.h:
 
 /usr/include/eigen3/Eigen/src/Core/NestByValue.h:
@@ -2136,9 +2107,11 @@ CMakeFiles/line_tracker.dir/src/binder.cpp.o: /home/aidyn/Desktop/mixed-reality-
 
 /usr/include/eigen3/Eigen/src/Core/ReturnByValue.h:
 
-/usr/include/eigen3/Eigen/src/Core/Reverse.h:
-
 /usr/include/eigen3/Eigen/src/Core/Select.h:
+
+/usr/include/c++/11/bits/functexcept.h:
+
+/usr/include/eigen3/Eigen/src/Core/SelfAdjointView.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h:
 
@@ -2210,6 +2183,8 @@ CMakeFiles/line_tracker.dir/src/binder.cpp.o: /home/aidyn/Desktop/mixed-reality-
 
 /usr/include/x86_64-linux-gnu/bits/waitstatus.h:
 
+/home/aidyn/Desktop/mixed-reality-line-tracking/submodules/pybind11/include/pybind11/detail/init.h:
+
 /usr/include/eigen3/Eigen/src/Core/arch/SSE/Complex.h:
 
 /usr/include/eigen3/Eigen/src/Core/arch/SSE/PacketMath.h:
@@ -2280,6 +2255,8 @@ CMakeFiles/line_tracker.dir/src/binder.cpp.o: /home/aidyn/Desktop/mixed-reality-
 
 /usr/include/eigen3/Eigen/src/Core/util/SymbolicIndex.h:
 
+/home/aidyn/Desktop/mixed-reality-line-tracking/submodules/pybind11/include/pybind11/gil.h:
+
 /usr/include/eigen3/Eigen/src/Eigenvalues/ComplexSchur.h:
 
 /usr/include/eigen3/Eigen/src/Core/ArrayBase.h:
@@ -2324,8 +2301,6 @@ CMakeFiles/line_tracker.dir/src/binder.cpp.o: /home/aidyn/Desktop/mixed-reality-
 
 /usr/include/eigen3/Eigen/src/Geometry/arch/Geometry_SIMD.h:
 
-/usr/include/eigen3/Eigen/src/Householder/Householder.h:
-
 /usr/include/wctype.h:
 
 /usr/include/eigen3/Eigen/src/LU/FullPivLU.h:
@@ -2358,6 +2333,8 @@ CMakeFiles/line_tracker.dir/src/binder.cpp.o: /home/aidyn/Desktop/mixed-reality-
 
 /usr/include/eigen3/Eigen/src/SVD/BDCSVD.h:
 
+/usr/include/eigen3/Eigen/src/SVD/SVDBase.h:
+
 /usr/include/features-time64.h:
 
 /usr/include/inttypes.h:
@@ -2365,10 +2342,6 @@ CMakeFiles/line_tracker.dir/src/binder.cpp.o: /home/aidyn/Desktop/mixed-reality-
 /usr/include/c++/11/bit:
 
 /usr/include/limits.h:
-
-/usr/local/include/opencv2/flann/nn_index.h:
-
-/usr/include/linux/errno.h:
 
 /usr/include/eigen3/Eigen/src/Core/AssignEvaluator.h:
 
@@ -2401,3 +2374,15 @@ CMakeFiles/line_tracker.dir/src/binder.cpp.o: /home/aidyn/Desktop/mixed-reality-
 /usr/include/python3.10/bltinmodule.h:
 
 /usr/include/python3.10/cellobject.h:
+
+/usr/include/python3.10/ceval.h:
+
+/usr/include/python3.10/code.h:
+
+/usr/include/c++/11/exception:
+
+/usr/include/python3.10/codecs.h:
+
+/usr/include/x86_64-linux-gnu/c++/11/bits/atomic_word.h:
+
+/usr/include/python3.10/compile.h:

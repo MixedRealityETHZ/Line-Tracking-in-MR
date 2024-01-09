@@ -108,7 +108,7 @@ proj_EXTERNAL_OBJECTS =
 proj: CMakeFiles/proj.dir/src/test_linefeaturetracker.cpp.o
 proj: CMakeFiles/proj.dir/src/linefeature_tracker.cpp.o
 proj: CMakeFiles/proj.dir/build.make
-proj: libelsed_lib.a
+proj: submodules/ELSED/libelsed.a
 proj: /usr/local/lib/libopencv_stitching.so.3.4.16
 proj: /usr/local/lib/libopencv_superres.so.3.4.16
 proj: /usr/local/lib/libopencv_videostab.so.3.4.16

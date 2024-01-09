@@ -770,7 +770,7 @@ void LineFeatureTracker::readImage(const cv::Mat &_img, int elsed_bool)
     Ptr<cv::ximgproc::EdgeDrawing> ed = cv::ximgproc::createEdgeDrawing();
 
     if (elsed_bool){
-        ELSEDParams params;
+        upm::ELSEDParams params;
         params.gradientThreshold = 32;
         params.anchorThreshold = 16;
         params.scanIntervals = 2;
@@ -802,7 +802,7 @@ void LineFeatureTracker::readImage(const cv::Mat &_img, int elsed_bool)
         if (edlines.size() < linenum + addLineNum)
         {
             if (elsed_bool){
-                ELSEDParams params = elsed.getParams();
+                upm::ELSEDParams params = elsed.getParams();
                 params.anchorThreshold *= 0.5;
                 params.scanIntervals *= 0.5;
 

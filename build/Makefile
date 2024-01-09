@@ -117,19 +117,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named elsed_lib
-
-# Build rule for target.
-elsed_lib: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 elsed_lib
-.PHONY : elsed_lib
-
-# fast build rule for target.
-elsed_lib/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/elsed_lib.dir/build.make CMakeFiles/elsed_lib.dir/build
-.PHONY : elsed_lib/fast
-
-#=============================================================================
 # Target rules for targets named proj
 
 # Build rule for target.
@@ -178,7 +165,7 @@ elsed: cmake_check_build_system
 
 # fast build rule for target.
 elsed/fast:
-	$(MAKE) $(MAKESILENT) -f ELSED/CMakeFiles/elsed.dir/build.make ELSED/CMakeFiles/elsed.dir/build
+	$(MAKE) $(MAKESILENT) -f submodules/ELSED/CMakeFiles/elsed.dir/build.make submodules/ELSED/CMakeFiles/elsed.dir/build
 .PHONY : elsed/fast
 
 #=============================================================================
@@ -191,80 +178,21 @@ elsed_main: cmake_check_build_system
 
 # fast build rule for target.
 elsed_main/fast:
-	$(MAKE) $(MAKESILENT) -f ELSED/CMakeFiles/elsed_main.dir/build.make ELSED/CMakeFiles/elsed_main.dir/build
+	$(MAKE) $(MAKESILENT) -f submodules/ELSED/CMakeFiles/elsed_main.dir/build.make submodules/ELSED/CMakeFiles/elsed_main.dir/build
 .PHONY : elsed_main/fast
 
-ELSED/src/ELSED.o: ELSED/src/ELSED.cpp.o
-.PHONY : ELSED/src/ELSED.o
+#=============================================================================
+# Target rules for targets named pyelsed
 
-# target to build an object file
-ELSED/src/ELSED.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/elsed_lib.dir/build.make CMakeFiles/elsed_lib.dir/ELSED/src/ELSED.cpp.o
-.PHONY : ELSED/src/ELSED.cpp.o
+# Build rule for target.
+pyelsed: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pyelsed
+.PHONY : pyelsed
 
-ELSED/src/ELSED.i: ELSED/src/ELSED.cpp.i
-.PHONY : ELSED/src/ELSED.i
-
-# target to preprocess a source file
-ELSED/src/ELSED.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/elsed_lib.dir/build.make CMakeFiles/elsed_lib.dir/ELSED/src/ELSED.cpp.i
-.PHONY : ELSED/src/ELSED.cpp.i
-
-ELSED/src/ELSED.s: ELSED/src/ELSED.cpp.s
-.PHONY : ELSED/src/ELSED.s
-
-# target to generate assembly for a file
-ELSED/src/ELSED.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/elsed_lib.dir/build.make CMakeFiles/elsed_lib.dir/ELSED/src/ELSED.cpp.s
-.PHONY : ELSED/src/ELSED.cpp.s
-
-ELSED/src/EdgeDrawer.o: ELSED/src/EdgeDrawer.cpp.o
-.PHONY : ELSED/src/EdgeDrawer.o
-
-# target to build an object file
-ELSED/src/EdgeDrawer.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/elsed_lib.dir/build.make CMakeFiles/elsed_lib.dir/ELSED/src/EdgeDrawer.cpp.o
-.PHONY : ELSED/src/EdgeDrawer.cpp.o
-
-ELSED/src/EdgeDrawer.i: ELSED/src/EdgeDrawer.cpp.i
-.PHONY : ELSED/src/EdgeDrawer.i
-
-# target to preprocess a source file
-ELSED/src/EdgeDrawer.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/elsed_lib.dir/build.make CMakeFiles/elsed_lib.dir/ELSED/src/EdgeDrawer.cpp.i
-.PHONY : ELSED/src/EdgeDrawer.cpp.i
-
-ELSED/src/EdgeDrawer.s: ELSED/src/EdgeDrawer.cpp.s
-.PHONY : ELSED/src/EdgeDrawer.s
-
-# target to generate assembly for a file
-ELSED/src/EdgeDrawer.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/elsed_lib.dir/build.make CMakeFiles/elsed_lib.dir/ELSED/src/EdgeDrawer.cpp.s
-.PHONY : ELSED/src/EdgeDrawer.cpp.s
-
-ELSED/src/FullSegmentInfo.o: ELSED/src/FullSegmentInfo.cpp.o
-.PHONY : ELSED/src/FullSegmentInfo.o
-
-# target to build an object file
-ELSED/src/FullSegmentInfo.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/elsed_lib.dir/build.make CMakeFiles/elsed_lib.dir/ELSED/src/FullSegmentInfo.cpp.o
-.PHONY : ELSED/src/FullSegmentInfo.cpp.o
-
-ELSED/src/FullSegmentInfo.i: ELSED/src/FullSegmentInfo.cpp.i
-.PHONY : ELSED/src/FullSegmentInfo.i
-
-# target to preprocess a source file
-ELSED/src/FullSegmentInfo.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/elsed_lib.dir/build.make CMakeFiles/elsed_lib.dir/ELSED/src/FullSegmentInfo.cpp.i
-.PHONY : ELSED/src/FullSegmentInfo.cpp.i
-
-ELSED/src/FullSegmentInfo.s: ELSED/src/FullSegmentInfo.cpp.s
-.PHONY : ELSED/src/FullSegmentInfo.s
-
-# target to generate assembly for a file
-ELSED/src/FullSegmentInfo.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/elsed_lib.dir/build.make CMakeFiles/elsed_lib.dir/ELSED/src/FullSegmentInfo.cpp.s
-.PHONY : ELSED/src/FullSegmentInfo.cpp.s
+# fast build rule for target.
+pyelsed/fast:
+	$(MAKE) $(MAKESILENT) -f submodules/ELSED/CMakeFiles/pyelsed.dir/build.make submodules/ELSED/CMakeFiles/pyelsed.dir/build
+.PHONY : pyelsed/fast
 
 src/binder.o: src/binder.cpp.o
 .PHONY : src/binder.o
@@ -350,20 +278,11 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... elsed"
-	@echo "... elsed_lib"
 	@echo "... elsed_main"
 	@echo "... line_tracker"
 	@echo "... linefeature_tracker"
 	@echo "... proj"
-	@echo "... ELSED/src/ELSED.o"
-	@echo "... ELSED/src/ELSED.i"
-	@echo "... ELSED/src/ELSED.s"
-	@echo "... ELSED/src/EdgeDrawer.o"
-	@echo "... ELSED/src/EdgeDrawer.i"
-	@echo "... ELSED/src/EdgeDrawer.s"
-	@echo "... ELSED/src/FullSegmentInfo.o"
-	@echo "... ELSED/src/FullSegmentInfo.i"
-	@echo "... ELSED/src/FullSegmentInfo.s"
+	@echo "... pyelsed"
 	@echo "... src/binder.o"
 	@echo "... src/binder.i"
 	@echo "... src/binder.s"
