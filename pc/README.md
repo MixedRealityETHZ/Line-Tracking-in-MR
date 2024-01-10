@@ -2,6 +2,12 @@
 
 ## Installation for C++
 
+### Prerequisites
+
+```
+The algorithms are tested on Ubuntu version 18.04 up to 22.04 with OpenCV 3.4.16.
+```
+
 ### Building
 
 ```
