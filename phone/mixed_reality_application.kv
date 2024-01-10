@@ -1,0 +1,100 @@
+#:kivy 1.0
+
+<MixedRealityApplicationLayout>
+    orientation: 'vertical'
+    size: root.width, root.height
+    
+    AndroidCamera:
+        id: camera
+
+        # size_hint: (1, 0.7)
+
+        index: 0
+        resolution: self.camera_resolution
+        allow_stretch: True
+        play: True
+        canvas.before:
+            PushMatrix
+            Rotate:
+                angle: -90
+                origin: self.center
+            Scale:
+                x: 1.333
+                y: -1.333
+                origin: self.center
+        canvas.after:
+            PopMatrix
+
+
+    MDBoxLayout:
+        id: wholeui
+        orientation: 'horizontal'
+        size_hint: (1, 0.2)
+        padding: 10
+
+        Slider: # MDSlider class is defective and it makes the Android app crash. 
+            id: afterimage_counter
+
+            size_hint: (0.7, 1)
+            pos_hint: {'center_x': .5, 'center_y': .1}
+
+            hint: True
+            step : 1
+            range: (camera._nr_afterimage_min, camera._nr_afterimage_max)
+
+            on_touch_move: root.slider_callback()
+
+        MDAnchorLayout:
+            id: bottomanchor
+            # Have the AnchorLayout for the line buttons be on the bottom right side of the screen.
+            # This doesn't work properly with a `MDBoxLayout` child...
+            anchor_x: 'right'
+            anchor_y: 'bottom'
+            # These values do not make any sense.
+            # They were hard-coded with try-and-error.
+            size_hint: (0.3, 1)
+            # pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+
+
+            MDBoxLayout:
+                orientation: 'vertical'
+                pos_hint: {'right': 1, 'center_y': .5}
+
+                NegateIconButton:
+                    id: show_tracked_button
+                    icon: 'transition'
+
+                    pos_hint: {'right': 1}
+
+                    on_press: self.negate_attribute(camera, '_show_tracked')
+                
+                NegateIconButton:
+                    id: show_newly_detected_button
+                    icon: 'new-box'
+
+                    pos_hint: {'right': 1}
+
+                    on_press: self.negate_attribute(camera, '_show_newly_detected')
+
+            MDBoxLayout:
+                orientation: 'vertical'
+                pos_hint: {'left': 0, 'center_y': .5}
+                NegateIconButton:
+                    id: is_ELSED_button
+                    icon: 'alpha-e-box-outline'
+                    alternate_icon: 'alpha-e-box'
+
+                    pos_hint: {'left': 0}
+
+                    on_press: self.negate_attribute(camera, '_is_ELSED_used', is_ELSED_button); self.dependence_negate_attribute(camera, '_is_detector_only', '_is_ELSED_used', False, False, is_detector_only)
+                
+                NegateIconButton:
+                    id: is_detector_only
+                    icon: 'alpha-d-box-outline'
+                    alternate_icon: 'alpha-d-box'
+
+                    pos_hint: {'left': 0}
+
+                    on_press: self.negate_attribute(camera, '_is_detector_only', is_detector_only) if getattr(camera, '_is_ELSED_used') == True else print() # The `print()` command does nothing.
+
+                
