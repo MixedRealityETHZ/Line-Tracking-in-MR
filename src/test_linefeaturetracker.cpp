@@ -20,86 +20,11 @@ int main() {
     if (frame.empty())
         throw "Error reading the first frame";
 
-    //cv::VideoWriter outputVideo = cv::VideoWriter("output_video.avi", cv::VideoWriter::fourcc('M', 'J', 'P', 'G'),\
-    // 30, cv::Size(frame.cols, frame.rows));
+    cv::VideoWriter outputVideo = cv::VideoWriter("output_video.avi", cv::VideoWriter::fourcc('M', 'J', 'P', 'G'),\
+     30, cv::Size(frame.cols, frame.rows));
     
     int elsed_bool = 0;
     int frame_count = 0;
-    std::chrono::steady_clock::time_point start, end;
-
-    start = std::chrono::steady_clock::now();
-
-    //Per frame detection
-    Ptr<cv::ximgproc::EdgeDrawing> ed = cv::ximgproc::createEdgeDrawing();
-    upm::ELSED elsed;
-
-    double min_edline_length = 0.125;
-
-    if (elsed_bool){
-        upm::ELSEDParams params;
-        params.gradientThreshold = 32;
-        params.anchorThreshold = 16;
-        params.scanIntervals = 2;
-        params.minLineLen = min_edline_length * (std::min(frame.cols, frame.rows));
-
-        elsed.setParams(params);
-    } else{
-        ed->params.EdgeDetectionOperator = cv::ximgproc::EdgeDrawing::SOBEL;
-        ed->params.GradientThresholdValue = 32;
-        ed->params.AnchorThresholdValue = 16;
-        ed->params.ScanInterval = 2;
-        ed->params.MinLineLength = min_edline_length * (std::min(frame.cols, frame.rows));
-    }
-
-    // Main loop to process video frames
-    for (;;)
-    {
-        cv::Mat img;
-        cv::cvtColor(frame, img, cv::COLOR_BGR2GRAY);
-        vector<Vec4f> edlines;
-        if (elsed_bool){
-            edlines = elsed.detect(img);
-        } else {
-            ed->detectEdges(img); ed->detectLines(edlines);
-        }
-
-        // Draw detected lines on the frame
-        for (const auto &line : edlines)
-        {
-            // Extract line coordinates
-            Point pt1(line[0], line[1]);
-            Point pt2(line[2], line[3]);
-
-            // Draw the line on the frame (assuming 'frame' is a color image)
-            cv::line(frame, pt1, pt2, Scalar(0, 255, 0), 2, LINE_AA); // Green lines with thickness 2
-        }
-
-        // Save the processed frame as an image
-        //string output_frame_path = "frames/frame_" + to_string(frame_count) + ".jpg";
-        // imwrite(output_frame_path, frame);
-
-        frame_count++;
-
-        cv::imshow("img", frame);
-        cv::waitKey(1);
-
-        // Continue capturing frames
-        capture >> frame;
-
-        // Break the loop if the frame is empty
-        //outputVideo.write(frame);
-        if (frame.empty())
-            break;
-    }
-
-    // Release the video capture
-    capture.release();
-    end = std::chrono::steady_clock::now();
-
-    std::chrono::duration<double> elapsed_time = end - start;
-    std::cout << frame_count << std::endl;
-    std::cout << frame_count / elapsed_time.count() << std::endl;
-    exit(EXIT_FAILURE);
 
     for( ; ; )
     {
@@ -161,8 +86,8 @@ int main() {
         }
         
         cv::imshow("img", frame);
-        cv::waitKey(1);
-        //outputVideo.write(frame);
+        cv::waitKey(20);
+        outputVideo.write(frame);
         frame_count++;
         capture >> frame;
 
@@ -170,13 +95,7 @@ int main() {
             break;
     }
 
-    end = std::chrono::steady_clock::now();
-
-    std::chrono::duration<double> elapsed_seconds = end - start;
-
-    std::cout << frame_count / elapsed_seconds.count() << std::endl;
-
-    //outputVideo.release();
+    outputVideo.release();
     waitKey(0);
 
     return 0;

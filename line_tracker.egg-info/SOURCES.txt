@@ -1,8 +1,0 @@
-README.md
-setup.py
-line_tracker.egg-info/PKG-INFO
-line_tracker.egg-info/SOURCES.txt
-line_tracker.egg-info/dependency_links.txt
-line_tracker.egg-info/not-zip-safe
-line_tracker.egg-info/requires.txt
-line_tracker.egg-info/top_level.txt

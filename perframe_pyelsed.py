@@ -4,7 +4,7 @@ import pyelsed
 import numpy as np
 
 # Path to input video
-video_path = '../tests/test_video3.mp4'
+video_path = 'tests/test_video3.mp4'
 
 # Create a folder to save processed frames
 output_folder = 'frames'
