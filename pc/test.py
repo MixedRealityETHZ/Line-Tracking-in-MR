@@ -112,21 +112,22 @@ if __name__ == '__main__':
                     else:
                         cv2.line(detect_img, s, e, colors[j], 1, cv2.LINE_AA)
 
-            # Gradient map
-            gray = img
-            # Compute gradients using Sobel operators
-            grad_x = cv2.Sobel(gray, cv2.CV_64F, 1, 0, ksize=3)
-            grad_y = cv2.Sobel(gray, cv2.CV_64F, 0, 1, ksize=3)
-            # Compute the magnitude of the gradient
-            magnitude = np.sqrt(grad_x**2 + grad_y**2)
-            # Normalize the magnitude to the range [0, 255]
-            magnitude = cv2.normalize(magnitude, None, 0, 255, cv2.NORM_MINMAX)
-            # Convert the gradient map to uint8
-            gradient_map = np.uint8(magnitude)
-            gray = cv2.cvtColor(gray, cv2.COLOR_GRAY2RGB)
-            gradient_map = cv2.cvtColor(gradient_map, cv2.COLOR_GRAY2RGB)
+            # # Gradient map
+            # gray = img
+            # # Compute gradients using Sobel operators
+            # grad_x = cv2.Sobel(gray, cv2.CV_64F, 1, 0, ksize=3)
+            # grad_y = cv2.Sobel(gray, cv2.CV_64F, 0, 1, ksize=3)
+            # # Compute the magnitude of the gradient
+            # magnitude = np.sqrt(grad_x**2 + grad_y**2)
+            # # Normalize the magnitude to the range [0, 255]
+            # magnitude = cv2.normalize(magnitude, None, 0, 255, cv2.NORM_MINMAX)
+            # # Convert the gradient map to uint8
+            # gradient_map = np.uint8(magnitude)
+            # gray = cv2.cvtColor(gray, cv2.COLOR_GRAY2RGB)
+            # gradient_map = cv2.cvtColor(gradient_map, cv2.COLOR_GRAY2RGB)
 
-            combined = np.hstack((detect_img, gradient_map))
+            # combined = np.hstack((detect_img, gradient_map))
+            combined = np.hstack((detect_img))
             cv2.imshow("img", combined)
             cv2.waitKey(20)
             output_video.write(combined)
