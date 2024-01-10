@@ -1,0 +1,8 @@
+[submodule "submodules/ELSED"]
+	path = submodules/ELSED
+	url = https://github.com/AidynUbingazhibov/ELSED.git
+	branch = modifiedELSED
+[submodule "submodules/pybind11"]
+        path = submodules/pybind11
+        url = https://github.com/pybind/pybind11.git
+	branch = v2.11
