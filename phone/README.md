@@ -1,5 +1,4 @@
 # Line Tracking in Mixed Reality
-This Project is a course project of 2023 Fall [Mixed Reality](https://cvg.ethz.ch/lectures/Mixed-Reality/) at ETH. We aim to real-time visualize line-tracking on mobile phones. Our work is based on [ELSED](https://github.com/iago-suarez/ELSED) and [EPLF-VINS](https://github.com/LeiXu1999/EPLF-VINS/tree/main).
 ### 1. Clone Repository
 ```bash
 git clone -b develop https://github.com/kstavratis/mixed-reality-line-tracking.git
