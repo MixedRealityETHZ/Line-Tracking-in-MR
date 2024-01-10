@@ -30,7 +30,7 @@ colors = [
 colors = colors[:numLinesToShow]
 
 if __name__ == '__main__':
-    cap = cv2.VideoCapture("tests/test_video.mp4")
+    cap = cv2.VideoCapture("tests/testvideo.mp4")
 
     if not cap.isOpened():
         print("Error opening video file")
@@ -127,10 +127,9 @@ if __name__ == '__main__':
             # gradient_map = cv2.cvtColor(gradient_map, cv2.COLOR_GRAY2RGB)
 
             # combined = np.hstack((detect_img, gradient_map))
-            combined = np.hstack((detect_img))
-            cv2.imshow("img", combined)
+            cv2.imshow("img", detect_img)
             cv2.waitKey(20)
-            output_video.write(combined)
+            output_video.write(detect_img)
         else:            
             cv2.imshow("img", tmp_img)
             cv2.waitKey(20)
